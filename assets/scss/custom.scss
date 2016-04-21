@@ -8,6 +8,8 @@
 
 	$top: #3498db;
 	$main: #f0f3f7;
+	$active: #51dacf;
+	$gray-text: #8ea1b4;
 	
 	@font-face {
 		font-family: 'Lato-Bold';
@@ -17,15 +19,23 @@
 	@font-face {
 		font-family: 'Lato-Regular';
 		src: url('../fonts/Lato-Regular.ttf') format('truetype');
-
 	}
 
 /* ------------------------------------
     Top Styles
 ------------------------------------- */
 
-.l-app {
+.l-chat {
 	background-color: $main;	
+	&__account {
+		margin-right:98px;
+		align-self: center;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
 }
 
 .b-top {
@@ -48,51 +58,30 @@
 		align-self: center;
 	}	
 	&__avatar {
-		@include sprite($b-top-avatar);
+		//@include sprite($b-top-avatar);
 		align-self: center;
 		margin-top: 10px;
 		margin-right: 6px;
 	}
-	&__account {
-		margin-right:98px;
-		align-self: center;
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-		&--name {
-			color: #FFF;
-			font-family: 'Lato-Bold', sans-serif;
-			font-size: 15px;
-			display: block;
-		}
-		&--status {
-			color: #2775a9;
-			font-size: 12px;
-			font-family: 'Lato-Regular', sans-serif;
-			position: relative;
-			&:after {
-				content: '';
-				position: absolute;
-				@include sprite($b-top-arrow);
-				right: 0;
-				top: 6px;
-			}
+	&__name {
+		color: #FFF;
+		font-family: 'Lato-Bold', sans-serif;
+		font-size: 15px;
+		display: block;
+	}
+	&__status {
+		color: #2775a9;
+		font-size: 12px;
+		font-family: 'Lato-Regular', sans-serif;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			@include sprite($b-top-arrow);
+			right: 0;
+			top: 6px;
 		}
 	}
-}
-
-/* ------------------------------------
-  	Workspace Styles
-------------------------------------- */
-
-.l-workspace {
-	//padding: 20px 26px;
-	display: flex;
-	//width: 100%;
-	background-color: #f5f6f8;
-	align-content: flex-start;
 }
 
 /* ------------------------------------
@@ -130,37 +119,110 @@
     Chat List Styles
 ------------------------------------- */
 
-.b-chatList {
-	margin: 20px 15px 20px 30px;
-	border-radius: 4px;
-	width: 280px;
-	height: 96vh;
-	background-color: #fff;
-	flex-grow: 1;
-	flex-shrink: 4;
-	&__title {
+.l-workspace {
+	//padding: 20px 26px;
+	display: flex;
+	//width: 100%;
+	background-color: #f5f6f8;
+	align-content: flex-start;
+	&__titleChatList {
 		font-family: 'Lato-Bold', sans-serif;
 		font-size: 16px;
 		margin: 0px 12px 12px 16px;
 		height: 62px;
 		display: flex;
 		justify-content: flex-end;
-		&--chat {
-			text-decoration: none;
-			margin-right: auto;
-			align-self: center;
-			color: #3598db;
-		}
-		&--new {
-			text-decoration: none;
-			text-transform: uppercase;
-			background-color: #d6e3ec;
-			padding: 10px 32px;
-			align-self: center;
-			border-radius: 4px;
-			color: #8ea1b4;
-		}
 		border-bottom: 2px solid #edf0f2;
+	}
+}
+
+.b-chatList {
+	background-color: #fff;
+	border-radius: 4px;
+	flex-grow: 1;
+	flex-shrink: 4;
+	height: 96vh;
+	margin: 20px 15px 20px 30px;
+	width: 280px;
+	&__chat {
+		align-self: center;
+		color: #3598db;
+		margin-right: auto;
+		text-decoration: none;
+	}
+	&__new {
+		align-self: center;
+		background-color: #d6e3ec;
+		border-radius: 4px;
+		color: #8ea1b4;
+		padding: 10px 32px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	&__count {
+		background-color: $top;
+		border-radius: 50%;
+		color: #fff;
+		font-family: 'Lato-Bold', sans-serif;
+		font-size: 12px;
+		font-style: normal;
+		left: 24px;
+		padding: 10px;
+		padding: 4px 8px;
+		position: absolute;
+		top: -8px;
+	}
+
+	&__name {
+			font-size: 16px;
+			font-family: 'Lato-Bold', sans-serif;
+	}
+
+	&__message {
+		font-size: 12px;
+		font-family: 'Lato-Regular', sans-serif;
+		align-self: center;
+		color: $gray-text;
+		margin: 0;
+	}
+
+	&__time {
+		font-size: 12px;
+		font-family: 'Lato-Regular', sans-serif;
+		color: #c9d6df;	
+	}
+
+	&__status {
+		height: 8px;
+    width: 8px;
+    margin-left: auto;
+		border-radius: 50%;
+		margin-top: 8px;
+		margin-bottom: 6px;
+		//align-self: center;
+		&--active {
+			background-color: $active;
+		}
+	}
+
+}
+
+.l-members {
+	&__person {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 24px;
+	}
+	&__avatar {
+		margin-left: 12px;
+		position: relative;
+		width: 20%;
+	}
+	&__info {
+		width: 60%;
+	}
+	&__status {
+		//width: 20%;
 	}
 }
 

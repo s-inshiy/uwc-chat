@@ -17,16 +17,17 @@
   </head>
 
   <body>
-    <div class="l-app">
+    <div class="l-chat">
       <div class="b-top">
         <div class="b-top__menu"></div>
         <div class="b-top__search"></div>
-        <div class="b-top__avatar"></div
-        >
-        <div class="b-top__account">
-          <span class="b-top__account--name">Riko Sapto Dimo</span>
+        <div class="b-top__avatar">
+          <img src="assets/images/b-top__avatar.png" alt="top-avatar">
+        </div>
+        <div class="l-chat__account">
+          <span class="b-top__name">Riko Sapto Dimo</span>
           <ul>
-            <li class="b-top__account--status">Available</li>
+            <li class="b-top__status">Available</li>
           </ul>
         </div>
       </div>
@@ -38,14 +39,43 @@
           <a href="#" class="b-side__settings"></a>
         </div>
         <div class="b-chatList">
-          <div class="b-chatList__title">
-            <a href="#" class="b-chatList__title--chat">Chat</a>
-            <a href="#" class="b-chatList__title--new">New</a>
+          <div class="l-workspace__titleChatList">
+            <a href="#" class="b-chatList__chat">Chat</a>
+            <a href="#" class="b-chatList__new">New</a>
           </div>
-          <div class="b-chatList__members">
-              <div class="b-chatList__members--avatar1">
-                
+          <div class="l-members">
+            <div class="l-members__person">
+              <div class="l-members__avatar">
+                <img src="assets/images/b-chatList__avatar1.png" class="b-chatList__image" alt="chat-avatar">
+                <i class="b-chatList__count">2</i>
               </div>
+              <div class="l-members__info">
+                <span class="b-chatList__name">Fikri Ruslandi</span>
+                <p class="b-chatList__message">Ko, Kumaha Project anu eta ...</p>
+              </div>  
+              <div class="l-members__status">
+                <div class="b-chatList__status b-chatList__status--active"></div>
+                <div class="b-chatList__time">
+                  1 min
+                </div>
+              </div>
+            </div>
+            <div class="l-members__person">
+              <div class="l-members__avatar">
+                <img src="assets/images/b-chatList__avatar2.png" class="b-chatList__image" alt="chat-avatar">
+                <i class="b-chatList__count">3</i>
+              </div>
+              <div class="l-members__info">
+                <span class="b-chatList__name">Moch Ramdhani</span>
+                <p class="b-chatList__message">Ane menang contes $1000 ...</p>
+              </div>  
+              <div class="l-members__status">
+                <div class="b-chatList__status b-chatList__status--active"></div>
+                <div class="b-chatList__time">
+                  2 min
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="b-chat">
