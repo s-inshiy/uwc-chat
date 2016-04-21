@@ -1,23 +1,191 @@
+
 @import "../sprites/sprite";
 
 
 /*------------------------------------
     Colors, Fonts Styles
 ------------------------------------- */
-	$main: #3498db;
+
+	$top: #3498db;
+	$main: #f0f3f7;
+	
+	@font-face {
+		font-family: 'Lato-Bold';
+		src: url('../fonts/Lato-Bold.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Lato-Regular';
+		src: url('../fonts/Lato-Regular.ttf') format('truetype');
+
+	}
 
 /* ------------------------------------
     Top Styles
 ------------------------------------- */
 
+.l-app {
+	background-color: $main;	
+}
+
 .b-top {
-	padding: 20px;
-	background-color: $main;
+	height: 70px;
+	background-color: $top;
+	//min-width: 1000px;
+	display: flex;
+	//flex-direction: column;
+	justify-content: flex-end;
+	&__menu {
+		@include sprite($b-top-menu)
+		//order: 1;
+		margin-right: auto;
+		margin-left: 22px;
+		align-self: center;
+		//margin: 26px auto 26px  22px
+	}
 	&__search {
-		margin: 20px;
-		@include sprite($b-chat-send);
+		@include sprite($b-top-search);
+		align-self: center;
+	}	
+	&__avatar {
+		@include sprite($b-top-avatar);
+		align-self: center;
+		margin-top: 10px;
+		margin-right: 6px;
+	}
+	&__account {
+		margin-right:98px;
+		align-self: center;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		&--name {
+			color: #FFF;
+			font-family: 'Lato-Bold', sans-serif;
+			font-size: 15px;
+			display: block;
+		}
+		&--status {
+			color: #2775a9;
+			font-size: 12px;
+			font-family: 'Lato-Regular', sans-serif;
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				@include sprite($b-top-arrow);
+				right: 0;
+				top: 6px;
+			}
+		}
 	}
 }
 
+/* ------------------------------------
+  	Workspace Styles
+------------------------------------- */
 
+.l-workspace {
+	//padding: 20px 26px;
+	display: flex;
+	//width: 100%;
+	background-color: #f5f6f8;
+	align-content: flex-start;
+}
 
+/* ------------------------------------
+    Side Styles
+------------------------------------- */
+
+.b-side {
+	width: 70px;
+	display: flex;
+	//flex-direction: column;
+	height: 100vh;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #fff;
+	&__home {
+		@include sprite($b-side-home);
+		margin: 20px 10px;
+	}
+	&__chat {
+		@include sprite($b-side-chat);
+		margin: 34px 10px;
+	}
+	&__chart {
+		@include sprite($b-side-chart);
+		margin: 16px 10px; 
+	};
+	&__settings {
+		@include sprite($b-side-settings);
+		margin: 34px 10px;
+	}
+}
+
+/* ------------------------------------
+    Chat List Styles
+------------------------------------- */
+
+.b-chatList {
+	margin: 20px 15px 20px 30px;
+	border-radius: 4px;
+	width: 280px;
+	height: 96vh;
+	background-color: #fff;
+	flex-grow: 1;
+	flex-shrink: 4;
+	&__title {
+		font-family: 'Lato-Bold', sans-serif;
+		font-size: 16px;
+		margin: 0px 12px 12px 16px;
+		height: 62px;
+		display: flex;
+		justify-content: flex-end;
+		&--chat {
+			text-decoration: none;
+			margin-right: auto;
+			align-self: center;
+			color: #3598db;
+		}
+		&--new {
+			text-decoration: none;
+			text-transform: uppercase;
+			background-color: #d6e3ec;
+			padding: 10px 32px;
+			align-self: center;
+			border-radius: 4px;
+			color: #8ea1b4;
+		}
+		border-bottom: 2px solid #edf0f2;
+	}
+}
+
+/* ------------------------------------
+    Chat Styles
+------------------------------------- */
+
+.b-chat {
+	width: 556px;
+	height: 96vh;
+	border-radius: 4px;
+	//background-color: #fff;
+	margin: 20px 15px 20px 15px;
+	flex-grow: 3;
+	flex-shrink: 3;
+}
+
+/* ------------------------------------
+    Agenda Styles
+------------------------------------- */
+
+.b-agenda {
+	min-width: 346px;
+	border-radius: 4px;
+	height: 96vh;
+	margin: 20px 30px 20px 15px;
+	background-color: #fff;
+}

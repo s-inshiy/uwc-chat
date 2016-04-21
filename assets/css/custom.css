@@ -46,15 +46,208 @@ The `sprites` mixin generates identical output to the CSS template
 /*------------------------------------
     Colors, Fonts Styles
 ------------------------------------- */
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url("../fonts/Lato-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("../fonts/Lato-Regular.ttf") format("truetype"); }
+
 /* ------------------------------------
     Top Styles
 ------------------------------------- */
+.l-app {
+  background-color: #f0f3f7; }
+
 .b-top {
-  padding: 20px;
-  background-color: #3498db; }
-  .b-top__search {
-    margin: 20px;
+  height: 70px;
+  background-color: #3498db;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .b-top__menu {
     background-image: url(../sprites/sprite.png);
-    background-position: 0px -55px;
-    width: 50px;
-    height: 46px; }
+    background-position: -176px -85px;
+    width: 25px;
+    height: 19px;
+    margin-right: auto;
+    margin-left: 22px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .b-top__search {
+    background-image: url(../sprites/sprite.png);
+    background-position: -198px -63px;
+    width: 22px;
+    height: 22px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .b-top__avatar {
+    background-image: url(../sprites/sprite.png);
+    background-position: 0px 0px;
+    width: 82px;
+    height: 55px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin-top: 10px;
+    margin-right: 6px; }
+  .b-top__account {
+    margin-right: 98px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+    .b-top__account ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    .b-top__account--name {
+      color: #FFF;
+      font-family: 'Lato-Bold', sans-serif;
+      font-size: 15px;
+      display: block; }
+    .b-top__account--status {
+      color: #2775a9;
+      font-size: 12px;
+      font-family: 'Lato-Regular', sans-serif;
+      position: relative; }
+      .b-top__account--status:after {
+        content: '';
+        position: absolute;
+        background-image: url(../sprites/sprite.png);
+        background-position: -199px -104px;
+        width: 10px;
+        height: 5px;
+        right: 0;
+        top: 6px; }
+
+/* ------------------------------------
+  	Workspace Styles
+------------------------------------- */
+.l-workspace {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f5f6f8;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start; }
+
+/* ------------------------------------
+    Side Styles
+------------------------------------- */
+.b-side {
+  width: 70px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fff; }
+  .b-side__home {
+    background-image: url(../sprites/sprite.png);
+    background-position: -176px -41px;
+    width: 23px;
+    height: 22px;
+    margin: 20px 10px; }
+  .b-side__chat {
+    background-image: url(../sprites/sprite.png);
+    background-position: -176px -104px;
+    width: 23px;
+    height: 16px;
+    margin: 34px 10px; }
+  .b-side__chart {
+    background-image: url(../sprites/sprite.png);
+    background-position: -176px -63px;
+    width: 22px;
+    height: 22px;
+    margin: 16px 10px; }
+  .b-side__settings {
+    background-image: url(../sprites/sprite.png);
+    background-position: -201px -85px;
+    width: 19px;
+    height: 18px;
+    margin: 34px 10px; }
+
+/* ------------------------------------
+    Chat List Styles
+------------------------------------- */
+.b-chatList {
+  margin: 20px 15px 20px 30px;
+  border-radius: 4px;
+  width: 280px;
+  height: 96vh;
+  background-color: #fff;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 4;
+  -ms-flex-negative: 4;
+  flex-shrink: 4; }
+  .b-chatList__title {
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 16px;
+    margin: 0px 12px 12px 16px;
+    height: 62px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    border-bottom: 2px solid #edf0f2; }
+    .b-chatList__title--chat {
+      text-decoration: none;
+      margin-right: auto;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+      color: #3598db; }
+    .b-chatList__title--new {
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: #d6e3ec;
+      padding: 10px 32px;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+      border-radius: 4px;
+      color: #8ea1b4; }
+
+/* ------------------------------------
+    Chat Styles
+------------------------------------- */
+.b-chat {
+  width: 556px;
+  height: 96vh;
+  border-radius: 4px;
+  margin: 20px 15px 20px 15px;
+  -webkit-flex-grow: 3;
+  -ms-flex-positive: 3;
+  flex-grow: 3;
+  -webkit-flex-shrink: 3;
+  -ms-flex-negative: 3;
+  flex-shrink: 3; }
+
+/* ------------------------------------
+    Agenda Styles
+------------------------------------- */
+.b-agenda {
+  min-width: 346px;
+  border-radius: 4px;
+  height: 96vh;
+  margin: 20px 30px 20px 15px;
+  background-color: #fff; }
