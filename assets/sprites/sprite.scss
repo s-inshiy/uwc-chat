@@ -1,0 +1,338 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$b-agenda-back-name: 'b-agenda__back';
+$b-agenda-back-x: 119px;
+$b-agenda-back-y: 55px;
+$b-agenda-back-offset-x: -119px;
+$b-agenda-back-offset-y: -55px;
+$b-agenda-back-width: 11px;
+$b-agenda-back-height: 20px;
+$b-agenda-back-total-width: 220px;
+$b-agenda-back-total-height: 143px;
+$b-agenda-back-image: 'sprite.png';
+$b-agenda-back: (119px, 55px, -119px, -55px, 11px, 20px, 220px, 143px, 'sprite.png', 'b-agenda__back', );
+$b-agenda-next-name: 'b-agenda__next';
+$b-agenda-next-x: 108px;
+$b-agenda-next-y: 55px;
+$b-agenda-next-offset-x: -108px;
+$b-agenda-next-offset-y: -55px;
+$b-agenda-next-width: 11px;
+$b-agenda-next-height: 20px;
+$b-agenda-next-total-width: 220px;
+$b-agenda-next-total-height: 143px;
+$b-agenda-next-image: 'sprite.png';
+$b-agenda-next: (108px, 55px, -108px, -55px, 11px, 20px, 220px, 143px, 'sprite.png', 'b-agenda__next', );
+$b-chart-list-avatar8-name: 'b-chartList__avatar8';
+$b-chart-list-avatar8-x: 176px;
+$b-chart-list-avatar8-y: 0px;
+$b-chart-list-avatar8-offset-x: -176px;
+$b-chart-list-avatar8-offset-y: 0px;
+$b-chart-list-avatar8-width: 44px;
+$b-chart-list-avatar8-height: 41px;
+$b-chart-list-avatar8-total-width: 220px;
+$b-chart-list-avatar8-total-height: 143px;
+$b-chart-list-avatar8-image: 'sprite.png';
+$b-chart-list-avatar8: (176px, 0px, -176px, 0px, 44px, 41px, 220px, 143px, 'sprite.png', 'b-chartList__avatar8', );
+$b-chat-list-avatar1-name: 'b-chatList__avatar1';
+$b-chat-list-avatar1-x: 130px;
+$b-chat-list-avatar1-y: 44px;
+$b-chat-list-avatar1-offset-x: -130px;
+$b-chat-list-avatar1-offset-y: -44px;
+$b-chat-list-avatar1-width: 46px;
+$b-chat-list-avatar1-height: 43px;
+$b-chat-list-avatar1-total-width: 220px;
+$b-chat-list-avatar1-total-height: 143px;
+$b-chat-list-avatar1-image: 'sprite.png';
+$b-chat-list-avatar1: (130px, 44px, -130px, -44px, 46px, 43px, 220px, 143px, 'sprite.png', 'b-chatList__avatar1', );
+$b-chat-list-avatar2-name: 'b-chatList__avatar2';
+$b-chat-list-avatar2-x: 0px;
+$b-chat-list-avatar2-y: 101px;
+$b-chat-list-avatar2-offset-x: 0px;
+$b-chat-list-avatar2-offset-y: -101px;
+$b-chat-list-avatar2-width: 47px;
+$b-chat-list-avatar2-height: 42px;
+$b-chat-list-avatar2-total-width: 220px;
+$b-chat-list-avatar2-total-height: 143px;
+$b-chat-list-avatar2-image: 'sprite.png';
+$b-chat-list-avatar2: (0px, 101px, 0px, -101px, 47px, 42px, 220px, 143px, 'sprite.png', 'b-chatList__avatar2', );
+$b-chat-list-avatar3-name: 'b-chatList__avatar3';
+$b-chat-list-avatar3-x: 82px;
+$b-chat-list-avatar3-y: 0px;
+$b-chat-list-avatar3-offset-x: -82px;
+$b-chat-list-avatar3-offset-y: 0px;
+$b-chat-list-avatar3-width: 48px;
+$b-chat-list-avatar3-height: 48px;
+$b-chat-list-avatar3-total-width: 220px;
+$b-chat-list-avatar3-total-height: 143px;
+$b-chat-list-avatar3-image: 'sprite.png';
+$b-chat-list-avatar3: (82px, 0px, -82px, 0px, 48px, 48px, 220px, 143px, 'sprite.png', 'b-chatList__avatar3', );
+$b-chat-list-avatar4-name: 'b-chatList__avatar4';
+$b-chat-list-avatar4-x: 50px;
+$b-chat-list-avatar4-y: 55px;
+$b-chat-list-avatar4-offset-x: -50px;
+$b-chat-list-avatar4-offset-y: -55px;
+$b-chat-list-avatar4-width: 47px;
+$b-chat-list-avatar4-height: 46px;
+$b-chat-list-avatar4-total-width: 220px;
+$b-chat-list-avatar4-total-height: 143px;
+$b-chat-list-avatar4-image: 'sprite.png';
+$b-chat-list-avatar4: (50px, 55px, -50px, -55px, 47px, 46px, 220px, 143px, 'sprite.png', 'b-chatList__avatar4', );
+$b-chat-list-avatar5-name: 'b-chatList__avatar5';
+$b-chat-list-avatar5-x: 92px;
+$b-chat-list-avatar5-y: 101px;
+$b-chat-list-avatar5-offset-x: -92px;
+$b-chat-list-avatar5-offset-y: -101px;
+$b-chat-list-avatar5-width: 44px;
+$b-chat-list-avatar5-height: 42px;
+$b-chat-list-avatar5-total-width: 220px;
+$b-chat-list-avatar5-total-height: 143px;
+$b-chat-list-avatar5-image: 'sprite.png';
+$b-chat-list-avatar5: (92px, 101px, -92px, -101px, 44px, 42px, 220px, 143px, 'sprite.png', 'b-chatList__avatar5', );
+$b-chat-list-avatar6-name: 'b-chatList__avatar6';
+$b-chat-list-avatar6-x: 47px;
+$b-chat-list-avatar6-y: 101px;
+$b-chat-list-avatar6-offset-x: -47px;
+$b-chat-list-avatar6-offset-y: -101px;
+$b-chat-list-avatar6-width: 45px;
+$b-chat-list-avatar6-height: 42px;
+$b-chat-list-avatar6-total-width: 220px;
+$b-chat-list-avatar6-total-height: 143px;
+$b-chat-list-avatar6-image: 'sprite.png';
+$b-chat-list-avatar6: (47px, 101px, -47px, -101px, 45px, 42px, 220px, 143px, 'sprite.png', 'b-chatList__avatar6', );
+$b-chat-list-avatar7-name: 'b-chatList__avatar7';
+$b-chat-list-avatar7-x: 130px;
+$b-chat-list-avatar7-y: 0px;
+$b-chat-list-avatar7-offset-x: -130px;
+$b-chat-list-avatar7-offset-y: 0px;
+$b-chat-list-avatar7-width: 46px;
+$b-chat-list-avatar7-height: 44px;
+$b-chat-list-avatar7-total-width: 220px;
+$b-chat-list-avatar7-total-height: 143px;
+$b-chat-list-avatar7-image: 'sprite.png';
+$b-chat-list-avatar7: (130px, 0px, -130px, 0px, 46px, 44px, 220px, 143px, 'sprite.png', 'b-chatList__avatar7', );
+$b-chat-attach-name: 'b-chat__attach';
+$b-chat-attach-x: 97px;
+$b-chat-attach-y: 55px;
+$b-chat-attach-offset-x: -97px;
+$b-chat-attach-offset-y: -55px;
+$b-chat-attach-width: 11px;
+$b-chat-attach-height: 22px;
+$b-chat-attach-total-width: 220px;
+$b-chat-attach-total-height: 143px;
+$b-chat-attach-image: 'sprite.png';
+$b-chat-attach: (97px, 55px, -97px, -55px, 11px, 22px, 220px, 143px, 'sprite.png', 'b-chat__attach', );
+$b-chat-call-name: 'b-chat__call';
+$b-chat-call-x: 176px;
+$b-chat-call-y: 120px;
+$b-chat-call-offset-x: -176px;
+$b-chat-call-offset-y: -120px;
+$b-chat-call-width: 17px;
+$b-chat-call-height: 19px;
+$b-chat-call-total-width: 220px;
+$b-chat-call-total-height: 143px;
+$b-chat-call-image: 'sprite.png';
+$b-chat-call: (176px, 120px, -176px, -120px, 17px, 19px, 220px, 143px, 'sprite.png', 'b-chat__call', );
+$b-chat-menu-name: 'b-chat__menu';
+$b-chat-menu-x: 193px;
+$b-chat-menu-y: 120px;
+$b-chat-menu-offset-x: -193px;
+$b-chat-menu-offset-y: -120px;
+$b-chat-menu-width: 5px;
+$b-chat-menu-height: 19px;
+$b-chat-menu-total-width: 220px;
+$b-chat-menu-total-height: 143px;
+$b-chat-menu-image: 'sprite.png';
+$b-chat-menu: (193px, 120px, -193px, -120px, 5px, 19px, 220px, 143px, 'sprite.png', 'b-chat__menu', );
+$b-chat-send-name: 'b-chat__send';
+$b-chat-send-x: 0px;
+$b-chat-send-y: 55px;
+$b-chat-send-offset-x: 0px;
+$b-chat-send-offset-y: -55px;
+$b-chat-send-width: 50px;
+$b-chat-send-height: 46px;
+$b-chat-send-total-width: 220px;
+$b-chat-send-total-height: 143px;
+$b-chat-send-image: 'sprite.png';
+$b-chat-send: (0px, 55px, 0px, -55px, 50px, 46px, 220px, 143px, 'sprite.png', 'b-chat__send', );
+$b-chat-videocall-name: 'b-chat__videocall';
+$b-chat-videocall-x: 199px;
+$b-chat-videocall-y: 41px;
+$b-chat-videocall-offset-x: -199px;
+$b-chat-videocall-offset-y: -41px;
+$b-chat-videocall-width: 18px;
+$b-chat-videocall-height: 20px;
+$b-chat-videocall-total-width: 220px;
+$b-chat-videocall-total-height: 143px;
+$b-chat-videocall-image: 'sprite.png';
+$b-chat-videocall: (199px, 41px, -199px, -41px, 18px, 20px, 220px, 143px, 'sprite.png', 'b-chat__videocall', );
+$b-side-chart-name: 'b-side__chart';
+$b-side-chart-x: 176px;
+$b-side-chart-y: 63px;
+$b-side-chart-offset-x: -176px;
+$b-side-chart-offset-y: -63px;
+$b-side-chart-width: 22px;
+$b-side-chart-height: 22px;
+$b-side-chart-total-width: 220px;
+$b-side-chart-total-height: 143px;
+$b-side-chart-image: 'sprite.png';
+$b-side-chart: (176px, 63px, -176px, -63px, 22px, 22px, 220px, 143px, 'sprite.png', 'b-side__chart', );
+$b-side-chat-name: 'b-side__chat';
+$b-side-chat-x: 176px;
+$b-side-chat-y: 104px;
+$b-side-chat-offset-x: -176px;
+$b-side-chat-offset-y: -104px;
+$b-side-chat-width: 23px;
+$b-side-chat-height: 16px;
+$b-side-chat-total-width: 220px;
+$b-side-chat-total-height: 143px;
+$b-side-chat-image: 'sprite.png';
+$b-side-chat: (176px, 104px, -176px, -104px, 23px, 16px, 220px, 143px, 'sprite.png', 'b-side__chat', );
+$b-side-home-name: 'b-side__home';
+$b-side-home-x: 176px;
+$b-side-home-y: 41px;
+$b-side-home-offset-x: -176px;
+$b-side-home-offset-y: -41px;
+$b-side-home-width: 23px;
+$b-side-home-height: 22px;
+$b-side-home-total-width: 220px;
+$b-side-home-total-height: 143px;
+$b-side-home-image: 'sprite.png';
+$b-side-home: (176px, 41px, -176px, -41px, 23px, 22px, 220px, 143px, 'sprite.png', 'b-side__home', );
+$b-side-settings-name: 'b-side__settings';
+$b-side-settings-x: 201px;
+$b-side-settings-y: 85px;
+$b-side-settings-offset-x: -201px;
+$b-side-settings-offset-y: -85px;
+$b-side-settings-width: 19px;
+$b-side-settings-height: 18px;
+$b-side-settings-total-width: 220px;
+$b-side-settings-total-height: 143px;
+$b-side-settings-image: 'sprite.png';
+$b-side-settings: (201px, 85px, -201px, -85px, 19px, 18px, 220px, 143px, 'sprite.png', 'b-side__settings', );
+$b-top-arrow-name: 'b-top__arrow';
+$b-top-arrow-x: 199px;
+$b-top-arrow-y: 104px;
+$b-top-arrow-offset-x: -199px;
+$b-top-arrow-offset-y: -104px;
+$b-top-arrow-width: 10px;
+$b-top-arrow-height: 5px;
+$b-top-arrow-total-width: 220px;
+$b-top-arrow-total-height: 143px;
+$b-top-arrow-image: 'sprite.png';
+$b-top-arrow: (199px, 104px, -199px, -104px, 10px, 5px, 220px, 143px, 'sprite.png', 'b-top__arrow', );
+$b-top-avatar-name: 'b-top__avatar';
+$b-top-avatar-x: 0px;
+$b-top-avatar-y: 0px;
+$b-top-avatar-offset-x: 0px;
+$b-top-avatar-offset-y: 0px;
+$b-top-avatar-width: 82px;
+$b-top-avatar-height: 55px;
+$b-top-avatar-total-width: 220px;
+$b-top-avatar-total-height: 143px;
+$b-top-avatar-image: 'sprite.png';
+$b-top-avatar: (0px, 0px, 0px, 0px, 82px, 55px, 220px, 143px, 'sprite.png', 'b-top__avatar', );
+$b-top-menu-name: 'b-top__menu';
+$b-top-menu-x: 176px;
+$b-top-menu-y: 85px;
+$b-top-menu-offset-x: -176px;
+$b-top-menu-offset-y: -85px;
+$b-top-menu-width: 25px;
+$b-top-menu-height: 19px;
+$b-top-menu-total-width: 220px;
+$b-top-menu-total-height: 143px;
+$b-top-menu-image: 'sprite.png';
+$b-top-menu: (176px, 85px, -176px, -85px, 25px, 19px, 220px, 143px, 'sprite.png', 'b-top__menu', );
+$b-top-search-name: 'b-top__search';
+$b-top-search-x: 198px;
+$b-top-search-y: 63px;
+$b-top-search-offset-x: -198px;
+$b-top-search-offset-y: -63px;
+$b-top-search-width: 22px;
+$b-top-search-height: 22px;
+$b-top-search-total-width: 220px;
+$b-top-search-total-height: 143px;
+$b-top-search-image: 'sprite.png';
+$b-top-search: (198px, 63px, -198px, -63px, 22px, 22px, 220px, 143px, 'sprite.png', 'b-top__search', );
+$spritesheet-width: 220px;
+$spritesheet-height: 143px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($b-agenda-back, $b-agenda-next, $b-chart-list-avatar8, $b-chat-list-avatar1, $b-chat-list-avatar2, $b-chat-list-avatar3, $b-chat-list-avatar4, $b-chat-list-avatar5, $b-chat-list-avatar6, $b-chat-list-avatar7, $b-chat-attach, $b-chat-call, $b-chat-menu, $b-chat-send, $b-chat-videocall, $b-side-chart, $b-side-chat, $b-side-home, $b-side-settings, $b-top-arrow, $b-top-avatar, $b-top-menu, $b-top-search, );
+$spritesheet: (220px, 143px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../sprites/#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

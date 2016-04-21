@@ -1,0 +1,23 @@
+@import "../sprites/sprite";
+
+
+/*------------------------------------
+    Colors, Fonts Styles
+------------------------------------- */
+	$main: #3498db;
+
+/* ------------------------------------
+    Top Styles
+------------------------------------- */
+
+.b-top {
+	padding: 20px;
+	background-color: $main;
+	&__search {
+		margin: 20px;
+		@include sprite($b-chat-send);
+	}
+}
+
+
+
