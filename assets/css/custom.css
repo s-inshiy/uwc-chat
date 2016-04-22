@@ -231,6 +231,9 @@ The `sprites` mixin generates identical output to the CSS template
     padding: 4px 8px;
     position: absolute;
     top: -8px; }
+    .b-chatList__count--active {
+      background-color: transparent;
+      color: transparent; }
   .b-chatList__name {
     font-size: 16px;
     font-family: 'Lato-Bold', sans-serif; }
@@ -246,6 +249,8 @@ The `sprites` mixin generates identical output to the CSS template
     font-size: 12px;
     font-family: 'Lato-Regular', sans-serif;
     color: #c9d6df; }
+    .b-chatList__time--active {
+      color: transparent; }
   .b-chatList__status {
     height: 8px;
     width: 8px;
@@ -263,7 +268,12 @@ The `sprites` mixin generates identical output to the CSS template
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 24px; }
+  padding-bottom: 12px;
+  padding-top: 12px; }
+  .l-members__person:first-child {
+    padding-top: 0px; }
+  .l-members__person--active {
+    background-color: #f5f6f8; }
 
 .l-members__avatar {
   margin-left: 12px;

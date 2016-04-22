@@ -1,4 +1,5 @@
 
+
 @import "../sprites/sprite";
 
 
@@ -10,6 +11,7 @@
 	$main: #f0f3f7;
 	$active: #51dacf;
 	$gray-text: #8ea1b4;
+	$gray-background: #f5f6f8;
 	
 	@font-face {
 		font-family: 'Lato-Bold';
@@ -123,7 +125,7 @@
 	//padding: 20px 26px;
 	display: flex;
 	//width: 100%;
-	background-color: #f5f6f8;
+	background-color: $gray-background;
 	align-content: flex-start;
 	&__titleChatList {
 		font-family: 'Lato-Bold', sans-serif;
@@ -171,6 +173,10 @@
 		padding: 4px 8px;
 		position: absolute;
 		top: -8px;
+		&--active {
+			background-color: transparent;
+			color: transparent;
+		}
 	}
 
 	&__name {
@@ -190,6 +196,9 @@
 		font-size: 12px;
 		font-family: 'Lato-Regular', sans-serif;
 		color: #c9d6df;	
+		&--active {
+			color: transparent;
+		}
 	}
 
 	&__status {
@@ -209,9 +218,16 @@
 
 .l-members {
 	&__person {
+		&:first-child {
+			padding-top: 0px;
+		}
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: 24px;
+		padding-bottom: 12px;
+		padding-top: 12px;
+		&--active {
+			background-color: $gray-background;
+		}
 	}
 	&__avatar {
 		margin-left: 12px;
@@ -224,6 +240,7 @@
 	&__status {
 		//width: 20%;
 	}
+
 }
 
 /* ------------------------------------
