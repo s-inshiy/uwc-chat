@@ -54,11 +54,21 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: 'Lato-Regular';
   src: url("../fonts/Lato-Regular.ttf") format("truetype"); }
 
+body, html {
+  height: 100%; }
+
 /* ------------------------------------
     Top Styles
 ------------------------------------- */
 .l-chat {
-  background-color: #f0f3f7; }
+  background-color: #f0f3f7;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
   .l-chat__account {
     margin-right: 98px;
     -webkit-align-self: center;
@@ -80,7 +90,7 @@ The `sprites` mixin generates identical output to the CSS template
   justify-content: flex-end; }
   .b-top__menu {
     background-image: url(../sprites/sprite.png);
-    background-position: -176px -85px;
+    background-position: -22px -46px;
     width: 25px;
     height: 19px;
     margin-right: auto;
@@ -90,7 +100,7 @@ The `sprites` mixin generates identical output to the CSS template
     align-self: center; }
   .b-top__search {
     background-image: url(../sprites/sprite.png);
-    background-position: -198px -63px;
+    background-position: -50px -22px;
     width: 22px;
     height: 22px;
     -webkit-align-self: center;
@@ -100,8 +110,8 @@ The `sprites` mixin generates identical output to the CSS template
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
-    margin-top: 10px;
-    margin-right: 6px; }
+    margin: 6px 25px 4px 18px;
+    border-radius: 50%; }
   .b-top__name {
     color: #FFF;
     font-family: 'Lato-Bold', sans-serif;
@@ -116,7 +126,7 @@ The `sprites` mixin generates identical output to the CSS template
       content: '';
       position: absolute;
       background-image: url(../sprites/sprite.png);
-      background-position: -199px -104px;
+      background-position: -91px -59px;
       width: 10px;
       height: 5px;
       right: 0;
@@ -130,7 +140,6 @@ The `sprites` mixin generates identical output to the CSS template
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: start;
   align-content: flex-start;
@@ -143,25 +152,25 @@ The `sprites` mixin generates identical output to the CSS template
   background-color: #fff; }
   .b-side__home {
     background-image: url(../sprites/sprite.png);
-    background-position: -176px -41px;
+    background-position: -50px 0px;
     width: 23px;
     height: 22px;
     margin: 20px 10px; }
   .b-side__chat {
     background-image: url(../sprites/sprite.png);
-    background-position: -176px -104px;
+    background-position: -47px -46px;
     width: 23px;
     height: 16px;
     margin: 34px 10px; }
   .b-side__chart {
     background-image: url(../sprites/sprite.png);
-    background-position: -176px -63px;
+    background-position: 0px -46px;
     width: 22px;
     height: 22px;
     margin: 16px 10px; }
   .b-side__settings {
     background-image: url(../sprites/sprite.png);
-    background-position: -201px -85px;
+    background-position: 0px -68px;
     width: 19px;
     height: 18px;
     margin: 34px 10px; }
@@ -169,27 +178,6 @@ The `sprites` mixin generates identical output to the CSS template
 /* ------------------------------------
     Chat List Styles
 ------------------------------------- */
-.l-workspace {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f5f6f8;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start; }
-  .l-workspace__titleChatList {
-    font-family: 'Lato-Bold', sans-serif;
-    font-size: 16px;
-    margin: 0px 12px 12px 16px;
-    height: 62px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    border-bottom: 2px solid #edf0f2; }
-
 .b-chatList {
   background-color: #fff;
   border-radius: 4px;
@@ -199,7 +187,12 @@ The `sprites` mixin generates identical output to the CSS template
   -webkit-flex-shrink: 4;
   -ms-flex-negative: 4;
   flex-shrink: 4;
-  height: 96vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: 20px 15px 20px 30px;
   width: 280px; }
   .b-chatList__chat {
@@ -218,7 +211,8 @@ The `sprites` mixin generates identical output to the CSS template
     color: #8ea1b4;
     padding: 10px 32px;
     text-decoration: none;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-right: 6px; }
   .b-chatList__count {
     background-color: #3498db;
     border-radius: 50%;
@@ -236,7 +230,10 @@ The `sprites` mixin generates identical output to the CSS template
       color: transparent; }
   .b-chatList__name {
     font-size: 16px;
-    font-family: 'Lato-Bold', sans-serif; }
+    font-family: 'Lato-Bold', sans-serif;
+    color: #34495e; }
+    .b-chatList__name--left {
+      color: #a8b6c4; }
   .b-chatList__message {
     font-size: 12px;
     font-family: 'Lato-Regular', sans-serif;
@@ -245,6 +242,8 @@ The `sprites` mixin generates identical output to the CSS template
     align-self: center;
     color: #8ea1b4;
     margin: 0; }
+    .b-chatList__message--left {
+      color: #c9d6df; }
   .b-chatList__time {
     font-size: 12px;
     font-family: 'Lato-Regular', sans-serif;
@@ -254,49 +253,250 @@ The `sprites` mixin generates identical output to the CSS template
   .b-chatList__status {
     height: 8px;
     width: 8px;
-    margin-left: auto;
+    margin-left: 18px;
     border-radius: 50%;
     margin-top: 8px;
-    margin-bottom: 6px; }
+    margin-bottom: 6px;
+    background-color: #d4e1ea; }
     .b-chatList__status--active {
       background-color: #51dacf; }
+  .b-chatList__image {
+    border-radius: 50%; }
 
-.l-members__person {
+.l-workspace {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-bottom: 12px;
-  padding-top: 12px; }
-  .l-members__person:first-child {
-    padding-top: 0px; }
-  .l-members__person--active {
-    background-color: #f5f6f8; }
+  background-color: #f5f6f8;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+  .l-workspace__chatListTitle {
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 16px;
+    margin: 0px 12px 0px 16px;
+    height: 62px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    border-bottom: 2px solid #edf0f2;
+    height: 62px; }
+  .l-workspace__chatTitle {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 62px;
+    border-bottom: 2px solid #ddebf4; }
+  .l-workspace__chat {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden; }
+  .l-workspace__type {
+    margin-top: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .l-workspace__angenaTitle {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 12px;
+    border-bottom: 2px solid #ddebf4; }
 
-.l-members__avatar {
-  margin-left: 12px;
-  position: relative;
-  width: 20%; }
-
-.l-members__info {
-  width: 60%; }
+.l-members {
+  overflow-y: auto;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+  .l-members__person {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: 6px;
+    padding-top: 10px;
+    margin-bottom: 4px; }
+    .l-members__person:first-child {
+      margin-top: 14px;
+      padding-top: 0; }
+    .l-members__person--active {
+      background-color: #f5f6f8; }
+  .l-members__avatar {
+    margin-left: 12px;
+    position: relative;
+    width: 20%; }
+  .l-members__info {
+    width: 60%; }
 
 /* ------------------------------------
     Chat Styles
 ------------------------------------- */
 .b-chat {
   width: 556px;
-  height: 96vh;
   border-radius: 4px;
-  margin: 20px 15px 20px 15px;
+  margin: 20px 15px 20px 6px;
   -webkit-flex-grow: 3;
   -ms-flex-positive: 3;
   flex-grow: 3;
   -webkit-flex-shrink: 3;
   -ms-flex-negative: 3;
-  flex-shrink: 3; }
+  flex-shrink: 3;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .b-chat__name {
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 18px;
+    color: #16315c;
+    letter-spacing: -0.8px;
+    margin-bottom: 4px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .b-chat__status {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #d4e1ea;
+    margin: 0 10px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+    .b-chat__status--active {
+      background-color: #51dacf; }
+  .b-chat__call {
+    background-image: url(../sprites/sprite.png);
+    background-position: -73px -20px;
+    width: 17px;
+    height: 19px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin: 0 4px 0 auto; }
+  .b-chat__videocall {
+    background-image: url(../sprites/sprite.png);
+    background-position: -73px 0px;
+    width: 18px;
+    height: 20px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin: 0px 26px; }
+  .b-chat__menu {
+    background-image: url(../sprites/sprite.png);
+    background-position: -91px -40px;
+    width: 5px;
+    height: 19px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin: 0 12px 0 10px; }
+  .b-chat__person {
+    margin: 8px 0px 8px 0px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .b-chat__person--right {
+      margin: 0px -4px 0px auto; }
+  .b-chat__message {
+    color: #8ea1b4;
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 12px;
+    margin: 0 0 0 20px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    background-color: #fff;
+    border-radius: 54px;
+    letter-spacing: 0.1px;
+    max-width: 352px;
+    padding: 12px 6px 12px 18px;
+    position: relative; }
+    .b-chat__message--left:before {
+      content: '';
+      background-image: url(../sprites/sprite.png);
+      background-position: -34px -68px;
+      width: 15px;
+      height: 14px;
+      left: -6px;
+      position: absolute; }
+    .b-chat__message--right {
+      background-color: #3598db;
+      color: #FFF;
+      margin: 0 20px 0 0;
+      padding: 12px;
+      position: relative; }
+      .b-chat__message--right:after {
+        content: '';
+        background-image: url(../sprites/sprite.png);
+        background-position: -19px -68px;
+        width: 15px;
+        height: 14px;
+        position: absolute;
+        right: -6px; }
+  .b-chat__avatar {
+    border-radius: 50%;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start; }
+  .b-chat__text {
+    min-width: 70%;
+    padding: 22px 30px 22px 22px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 12px;
+    color: #8ea1b4; }
+    .b-chat__text:focus, .b-chat__text:active {
+      outline: none; }
+  .b-chat__type {
+    background-color: #FFF;
+    border-radius: 10px; }
+  .b-chat__button {
+    opacity: 0;
+    padding: 12px 22px;
+    cursor: pointer; }
+    .b-chat__button--image {
+      background-image: url(../sprites/sprite.png);
+      background-position: 0px 0px;
+      width: 50px;
+      height: 46px;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+      border-radius: 50%;
+      margin-right: 10px; }
+  .b-chat__file {
+    padding: 10px;
+    opacity: 0;
+    max-width: 10px;
+    cursor: pointer; }
+    .b-chat__file--image {
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+      background-image: url(../sprites/sprite.png);
+      background-position: -73px -39px;
+      width: 11px;
+      height: 22px;
+      margin-left: auto;
+      margin-right: 10px; }
 
 /* ------------------------------------
     Agenda Styles
@@ -304,6 +504,20 @@ The `sprites` mixin generates identical output to the CSS template
 .b-agenda {
   min-width: 346px;
   border-radius: 4px;
-  height: 96vh;
   margin: 20px 30px 20px 15px;
   background-color: #fff; }
+  .b-agenda__name {
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 18px;
+    color: #3598db;
+    margin: 20px 0px;
+    letter-spacing: -1.2px; }
+  .b-agenda__menu {
+    background-image: url(../sprites/sprite.png);
+    background-position: -91px -40px;
+    width: 5px;
+    height: 19px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin: -2px 8px 0 auto; }

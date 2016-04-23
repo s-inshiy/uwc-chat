@@ -1,7 +1,4 @@
-
-
 @import "../sprites/sprite";
-
 
 /*------------------------------------
     Colors, Fonts Styles
@@ -12,6 +9,9 @@
 	$active: #51dacf;
 	$gray-text: #8ea1b4;
 	$gray-background: #f5f6f8;
+	$gray-time: #c9d6df;
+	$gray-status: #d4e1ea;
+	$blue-main: #3598db;
 	
 	@font-face {
 		font-family: 'Lato-Bold';
@@ -23,12 +23,19 @@
 		src: url('../fonts/Lato-Regular.ttf') format('truetype');
 	}
 
+	body, html {
+		height: 100%;
+	}
+
 /* ------------------------------------
     Top Styles
 ------------------------------------- */
 
 .l-chat {
 	background-color: $main;	
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 	&__account {
 		margin-right:98px;
 		align-self: center;
@@ -48,7 +55,7 @@
 	//flex-direction: column;
 	justify-content: flex-end;
 	&__menu {
-		@include sprite($b-top-menu)
+		@include sprite($b-top-menu);
 		//order: 1;
 		margin-right: auto;
 		margin-left: 22px;
@@ -60,10 +67,9 @@
 		align-self: center;
 	}	
 	&__avatar {
-		//@include sprite($b-top-avatar);
 		align-self: center;
-		margin-top: 10px;
-		margin-right: 6px;
+		margin: 6px 25px 4px 18px;
+		border-radius: 50%;
 	}
 	&__name {
 		color: #FFF;
@@ -93,8 +99,6 @@
 .b-side {
 	width: 70px;
 	display: flex;
-	//flex-direction: column;
-	height: 100vh;
 	align-content: flex-start;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -121,34 +125,18 @@
     Chat List Styles
 ------------------------------------- */
 
-.l-workspace {
-	//padding: 20px 26px;
-	display: flex;
-	//width: 100%;
-	background-color: $gray-background;
-	align-content: flex-start;
-	&__titleChatList {
-		font-family: 'Lato-Bold', sans-serif;
-		font-size: 16px;
-		margin: 0px 12px 12px 16px;
-		height: 62px;
-		display: flex;
-		justify-content: flex-end;
-		border-bottom: 2px solid #edf0f2;
-	}
-}
-
 .b-chatList {
 	background-color: #fff;
 	border-radius: 4px;
 	flex-grow: 1;
 	flex-shrink: 4;
-	height: 96vh;
+	display: flex;
+	flex-direction: column;
 	margin: 20px 15px 20px 30px;
 	width: 280px;
 	&__chat {
 		align-self: center;
-		color: #3598db;
+		color: $blue-main;
 		margin-right: auto;
 		text-decoration: none;
 	}
@@ -156,10 +144,11 @@
 		align-self: center;
 		background-color: #d6e3ec;
 		border-radius: 4px;
-		color: #8ea1b4;
+		color: $gray-text;
 		padding: 10px 32px;
 		text-decoration: none;
 		text-transform: uppercase;
+		margin-right: 6px;
 	}
 	&__count {
 		background-color: $top;
@@ -182,6 +171,10 @@
 	&__name {
 			font-size: 16px;
 			font-family: 'Lato-Bold', sans-serif;
+			color: #34495e;
+			&--left {
+				color: #a8b6c4;
+			}
 	}
 
 	&__message {
@@ -190,12 +183,16 @@
 		align-self: center;
 		color: $gray-text;
 		margin: 0;
+		&--left {
+			color: $gray-time;
+		}
 	}
 
 	&__time {
 		font-size: 12px;
 		font-family: 'Lato-Regular', sans-serif;
-		color: #c9d6df;	
+		color: $gray-time;	
+		//max-width: 10%;
 		&--active {
 			color: transparent;
 		}
@@ -204,27 +201,73 @@
 	&__status {
 		height: 8px;
     width: 8px;
-    margin-left: auto;
+    margin-left: 18px;
 		border-radius: 50%;
 		margin-top: 8px;
 		margin-bottom: 6px;
+		background-color: $gray-status;
 		//align-self: center;
 		&--active {
 			background-color: $active;
 		}
 	}
 
+	&__image {
+		border-radius: 50%;
+	}
+
+}
+
+.l-workspace {
+	display: flex;
+	background-color: $gray-background;
+	align-content: flex-start;
+	flex-grow: 1;
+	&__chatListTitle {
+		font-family: 'Lato-Bold', sans-serif;
+		font-size: 16px;
+		margin: 0px 12px 0px 16px;
+		height: 62px;
+		display: flex;
+		justify-content: flex-end;
+		border-bottom: 2px solid #edf0f2;
+		height: 62px;
+	}
+	&__chatTitle {
+		display: flex;
+		height: 62px;
+		border-bottom: 2px solid #ddebf4;
+	}
+	&__chat {
+		display: flex;
+		flex-wrap: wrap;
+		overflow-y: auto;
+		overflow-x: hidden; 
+	}
+	&__type {
+		margin-top: auto;
+		display: flex;
+	}
+	&__angenaTitle {
+			display: flex;
+			margin: 0 12px;
+			border-bottom: 2px solid #ddebf4;
+	}
 }
 
 .l-members {
+	overflow-y: auto;
+	flex-grow: 1;
 	&__person {
 		&:first-child {
-			padding-top: 0px;
+			margin-top: 14px;
+			padding-top: 0;
 		}
 		display: flex;
 		flex-wrap: wrap;
-		padding-bottom: 12px;
-		padding-top: 12px;
+		padding-bottom: 6px;
+		padding-top: 10px;
+		margin-bottom: 4px;
 		&--active {
 			background-color: $gray-background;
 		}
@@ -238,7 +281,7 @@
 		width: 60%;
 	}
 	&__status {
-		//width: 20%;
+		//width: 18%;
 	}
 
 }
@@ -249,12 +292,137 @@
 
 .b-chat {
 	width: 556px;
-	height: 96vh;
 	border-radius: 4px;
-	//background-color: #fff;
-	margin: 20px 15px 20px 15px;
+	//margin: 20px 15px 20px 10px;
+	margin: 20px 15px 20px 6px;
 	flex-grow: 3;
 	flex-shrink: 3;
+	display: flex;
+	flex-direction: column;
+	&__name {
+		font-family: 'Lato-Bold', sans-serif;
+		font-size: 18px;
+		color: #16315c;
+		letter-spacing: -0.8px;
+		margin-bottom: 4px;
+		align-self: center;
+	}
+	&__status {
+		height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: $gray-status;
+    margin: 0 10px;
+    align-self: center;    
+    &--active {
+    	background-color: $active;
+    }
+	}
+	&__call {
+		@include sprite($b-chat-call);
+		align-self: center;
+		margin: 0 4px 0 auto;
+	}
+	&__videocall {
+		@include sprite($b-chat-videocall);
+		align-self: center;
+		margin: 0px 26px;;
+	}
+	&__menu {
+		@include sprite($b-chat-menu);
+		align-self: center;
+		// margin: 0 10px;
+		margin: 0 12px 0 10px;
+	}
+	&__person {
+		//margin: 8px 0px 8px -8px;
+		margin: 8px 0px 8px 0px;
+		display: flex;
+		&--right {
+			//margin: 0 -4px 8px auto;
+			margin: 0px -4px 0px auto;
+		}
+	}
+	&__message {
+		color: $gray-text;
+		font-family: 'Lato-Regular', sans-serif;
+		font-size: 12px;
+		margin: 0 0 0 20px;
+    align-self: center;
+    background-color: #fff;
+    border-radius: 54px;
+    letter-spacing: 0.1px;
+    max-width: 352px;
+    // padding: 12px 16px;
+    padding: 12px 6px 12px 18px;
+    position: relative;
+    &--left {
+    	&:before {
+    		content: '';
+    		@include sprite($b-chat-triangle0);
+    		left: -6px;
+    		position: absolute;
+    	}
+    }
+		&--right {
+			background-color: $blue-main;
+			color: #FFF;
+			margin: 0 20px 0 0;
+			padding: 12px;
+			position: relative;
+			&:after {
+				content: '';
+    		@include sprite($b-chat-triangle1);
+    		position: absolute;
+    		right: -6px;
+			}
+		}
+	}
+	&__avatar {
+		border-radius: 50%;
+		align-self: flex-start;
+		//margin-left: 5px;
+	}
+	&__text {
+		min-width: 70%;
+		padding: 22px 30px 22px 22px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 12px;
+    color: $gray-text;
+    &:focus, &:active {
+    	outline: none;
+    }
+	}
+	&__type {
+		background-color: #FFF;
+		border-radius: 10px;
+	}
+	&__button {
+		&--image {
+			@include sprite ($b-chat-send);
+    	//margin: 20px 0;
+    	align-self: center;
+    	border-radius: 50%;
+    	margin-right: 10px;
+		}
+    opacity: 0;
+    padding: 12px 22px;
+    cursor: pointer;
+	}
+	&__file {
+		&--image {
+			align-self: center;
+			@include sprite ($b-chat-attach);
+			margin-left: auto;
+			margin-right: 10px;			
+		}
+		padding: 10px;
+		opacity: 0;
+		max-width: 10px;
+		cursor: pointer;
+	}
 }
 
 /* ------------------------------------
@@ -264,7 +432,18 @@
 .b-agenda {
 	min-width: 346px;
 	border-radius: 4px;
-	height: 96vh;
 	margin: 20px 30px 20px 15px;
 	background-color: #fff;
+	&__name {
+		font-family: 'Lato-Bold', sans-serif;
+		font-size: 18px;
+		color: $blue-main;
+		margin: 20px 0px;
+		letter-spacing: -1.2px;
+	}
+	&__menu {
+		@include sprite ($b-chat-menu);
+		align-self: center;
+    margin: -2px 8px 0 auto;
+	}
 }
