@@ -11,6 +11,7 @@
 	$gray-background: #f5f6f8;
 	$gray-time: #c9d6df;
 	$gray-status: #d4e1ea;
+	$gray-name: #34495e;
 	$blue-main: #3598db;
 	
 	@font-face {
@@ -129,7 +130,7 @@
 	background-color: #fff;
 	border-radius: 4px;
 	flex-grow: 1;
-	flex-shrink: 4;
+	//flex-shrink: 4;
 	display: flex;
 	flex-direction: column;
 	margin: 20px 15px 20px 30px;
@@ -171,7 +172,7 @@
 	&__name {
 			font-size: 16px;
 			font-family: 'Lato-Bold', sans-serif;
-			color: #34495e;
+			color: $gray-name;
 			&--left {
 				color: #a8b6c4;
 			}
@@ -391,6 +392,7 @@
     font-family: 'Lato-Regular', sans-serif;
     font-size: 12px;
     color: $gray-text;
+    background-color: #fff;
     &:focus, &:active {
     	outline: none;
     }
@@ -446,4 +448,142 @@
 		align-self: center;
     margin: -2px 8px 0 auto;
 	}
+
 }
+
+
+/* ---------- CALENDAR ---------- */
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.calendar {
+	text-align: center;
+ //  margin-left: 10px;
+ //  margin-right: 14px;
+ //  margin-bottom: 20px;
+  margin: 0 14px 20px 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ddebf4;
+}
+
+.calendar header {
+	height: 34px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 28px;
+}
+
+.calendar h5 {
+	font-size: 16px;
+	font-family: 'Lato-Regular', sans-serif;
+	font-weight: 300;
+	//margin: 8px 0 34px;
+	margin: 0;
+	letter-spacing: -0.6px;
+	color: $gray-name;
+}
+
+.calendar thead {
+	//font-weight: 600;
+	td {
+		height: 38px;
+		width: 40px;
+		color: $gray-text;
+	}
+	text-transform: uppercase;
+}
+
+.calendar tbody {
+	color: #7c8a95;
+}
+
+// .calendar tbody td:hover {
+// 	border: 2px solid #00addf;
+// }
+
+.calendar td {
+	border: 2px solid transparent;
+	border-radius: 50%;
+	display: inline-block;
+	height: 24px;
+	font-family: 'Lato-Regular', sans-serif;
+	font-size: 14px;
+	//line-height: 4em;
+	color: $gray-text;
+	text-align: center;
+	width: 40px;
+}
+
+.calendar .prev-month,
+.calendar .next-month {
+	color: #cbd1d2;
+}
+
+.calendar .prev-month:hover,
+.calendar .next-month:hover {
+	border: 2px solid #cbd1d2;
+}
+
+.current-day {
+		cursor: pointer;
+	  background: #3498db;
+	  color: #FFF;
+    border-radius: 50%;
+		padding: 8px;
+}
+
+.event {
+	cursor: pointer;
+	position: relative;
+}
+
+.event:after {
+	background: $active;
+	border-radius: 50%;
+	bottom: 0;
+	display: block;
+	content: '';
+	height: 8px;
+	left: 50%;
+	margin: -.25em 0 0 -.25em;
+	position: absolute;
+	width: 8px;
+}
+
+.event.current-day:after {
+	background: #f9f9f9;
+}
+
+.btn-prev,
+.btn-next {
+	// border: 2px solid #cbd1d2;
+	// border-radius: 50%;
+	// color: #cbd1d2;
+	// height: 2em;
+	// font-size: .75em;
+	// line-height: 2em;
+	// margin: -1em;
+	// position: absolute;
+	// top: 50%;
+	// width: 2em;
+}
+
+// .btn-prev:hover,
+// .btn-next:hover {
+// 	background: #cbd1d2;
+// 	color: #f9f9f9;
+// }
+
+.btn-prev {
+	@include sprite($b-agenda-back);
+}
+
+.btn-next {
+	@include sprite($b-agenda-next);
+}
+
