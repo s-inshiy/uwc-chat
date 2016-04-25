@@ -310,6 +310,8 @@ body, html {
     display: flex;
     margin: 0 12px;
     border-bottom: 2px solid #ddebf4; }
+  .l-workspace__event {
+    margin: 0 14px 20px 10px; }
 
 .l-members {
   overflow-y: auto;
@@ -437,7 +439,7 @@ body, html {
     .b-chat__message--right {
       background-color: #3598db;
       color: #FFF;
-      margin: 0 20px 0 0;
+      margin: 0 20px 0 auto;
       padding: 12px;
       position: relative; }
       .b-chat__message--right:after {
@@ -520,6 +522,18 @@ body, html {
     -ms-flex-item-align: center;
     align-self: center;
     margin: -2px 8px 0 auto; }
+  .b-agenda__date {
+    font-size: 16px;
+    font-family: 'Lato-Bold', sans-serif;
+    letter-spacing: -0.8px;
+    margin: 0;
+    color: #34495e; }
+  .b-agenda__event {
+    font-size: 14px;
+    font-family: 'Lato-Regular', sans-serif;
+    letter-spacing: -0.8px;
+    margin: 0;
+    color: #8ea1b4; }
 
 /* ---------- CALENDAR ---------- */
 table {
