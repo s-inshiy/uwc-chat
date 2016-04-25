@@ -405,6 +405,7 @@ body, html {
     align-self: center;
     margin: 0 12px 0 10px; }
   .b-chat__person {
+    min-width: 60%;
     margin: 8px 0px 8px 0px;
     display: -webkit-flex;
     display: -ms-flexbox;
