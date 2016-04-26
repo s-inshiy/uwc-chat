@@ -1,0 +1,20 @@
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+	.b-chat {
+		margin: 20px 6px;
+		&__videocall {
+			margin: 0 4px;
+		}
+		&__status {
+			margin: 0 auto 0 6px;
+		}
+		&__menu {
+			margin-right: 0;
+		}
+	}
+	.b-chatList {
+		margin: 20px 10px;
+	}
+	.b-agenda {
+		margin: 20px 10px;
+	}
+}

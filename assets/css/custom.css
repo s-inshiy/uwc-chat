@@ -80,14 +80,15 @@ body, html {
       list-style: none; }
 
 .b-top {
-  height: 70px;
   background-color: #3498db;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 82px;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  min-height: 70px; }
   .b-top__menu {
     background-image: url(../sprites/sprite.png);
     background-position: -22px -46px;
@@ -181,16 +182,17 @@ body, html {
 .b-chatList {
   background-color: #fff;
   border-radius: 4px;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin: 20px 15px 20px 30px;
+  min-width: 272px;
   width: 280px; }
   .b-chatList__chat {
     -webkit-align-self: center;
@@ -261,35 +263,34 @@ body, html {
     border-radius: 50%; }
 
 .l-workspace {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f5f6f8;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: start;
   align-content: flex-start;
+  background-color: #f5f6f8;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
   .l-workspace__chatListTitle {
-    font-family: 'Lato-Bold', sans-serif;
-    font-size: 16px;
-    margin: 0px 12px 0px 16px;
-    height: 62px;
+    border-bottom: 2px solid #edf0f2;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 16px;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    border-bottom: 2px solid #edf0f2;
-    height: 62px; }
+    margin: 0px 12px 0px 16px;
+    min-height: 62px; }
   .l-workspace__chatTitle {
+    border-bottom: 2px solid #ddebf4;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 62px;
-    border-bottom: 2px solid #ddebf4; }
+    min-height: 62px; }
   .l-workspace__chat {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -297,21 +298,32 @@ body, html {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    overflow-y: auto;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    overflow-y: auto; }
   .l-workspace__type {
-    margin-top: auto;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    margin-top: auto; }
   .l-workspace__angenaTitle {
+    border-bottom: 2px solid #ddebf4;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin: 0 12px;
-    border-bottom: 2px solid #ddebf4; }
+    min-height: 62px; }
+  .l-workspace__agendaEvents {
+    border-bottom: 1px solid #ddebf4;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 14px 0 0 0;
+    overflow-y: auto;
+    padding: 0 18px 0 14px; }
   .l-workspace__event {
-    margin: 0 14px 20px 10px; }
+    margin: 14px 0 16px; }
+    .l-workspace__event:first-child {
+      margin-top: 0; }
 
 .l-members {
   overflow-y: auto;
@@ -456,7 +468,7 @@ body, html {
     -ms-flex-item-align: start;
     align-self: flex-start; }
   .b-chat__text {
-    min-width: 70%;
+    min-width: 50%;
     padding: 22px 30px 22px 22px;
     border: none;
     border-radius: 10px;
@@ -506,12 +518,20 @@ body, html {
   min-width: 346px;
   border-radius: 4px;
   margin: 20px 30px 20px 15px;
-  background-color: #fff; }
+  background-color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
   .b-agenda__name {
     font-family: 'Lato-Bold', sans-serif;
     font-size: 18px;
     color: #3598db;
-    margin: 20px 0px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
     letter-spacing: -1.2px; }
   .b-agenda__menu {
     background-image: url(../sprites/sprite.png);
@@ -528,12 +548,21 @@ body, html {
     letter-spacing: -0.8px;
     margin: 0;
     color: #34495e; }
-  .b-agenda__event {
+  .b-agenda__descr {
     font-size: 14px;
     font-family: 'Lato-Regular', sans-serif;
     letter-spacing: -0.8px;
     margin: 0;
     color: #8ea1b4; }
+  .b-agenda__new {
+    font-family: 'Lato-Bold', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    padding: 22px 30px 22px 22px;
+    color: #3598db;
+    display: block;
+    text-decoration: none; }
 
 /* ---------- CALENDAR ---------- */
 table {
@@ -542,7 +571,7 @@ table {
 
 .calendar {
   text-align: center;
-  margin: 0 14px 20px 10px;
+  margin: 0 14px 0px 10px;
   padding-bottom: 20px;
   border-bottom: 2px solid #ddebf4; }
 
@@ -563,8 +592,8 @@ table {
   font-size: 16px;
   font-family: 'Lato-Regular', sans-serif;
   font-weight: 300;
-  margin: 0;
-  letter-spacing: -0.6px;
+  letter-spacing: -1px;
+  margin-right: 10px;
   color: #34495e; }
 
 .calendar thead {
