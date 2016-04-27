@@ -312,18 +312,35 @@ body, html {
     display: flex;
     margin: 0 12px;
     min-height: 62px; }
+  .l-workspace__calendar {
+    border-bottom: 2px solid #ddebf4;
+    margin: 0 14px 0px 10px;
+    padding-bottom: 20px;
+    text-align: center; }
   .l-workspace__agendaEvents {
     border-bottom: 1px solid #ddebf4;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    margin: 14px 0 0 0;
+    margin: 18px 0 0 0;
     overflow-y: auto;
     padding: 0 18px 0 14px; }
   .l-workspace__event {
     margin: 14px 0 16px; }
     .l-workspace__event:first-child {
       margin-top: 0; }
+  .l-workspace__headerCalendar {
+    height: 34px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 30px; }
 
 .l-members {
   overflow-y: auto;
@@ -542,6 +559,13 @@ body, html {
     -ms-flex-item-align: center;
     align-self: center;
     margin: -2px 8px 0 auto; }
+  .b-agenda__title {
+    font-size: 16px;
+    font-family: 'Lato-Regular', sans-serif;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-right: 10px;
+    color: #34495e; }
   .b-agenda__date {
     font-size: 16px;
     font-family: 'Lato-Bold', sans-serif;
@@ -555,110 +579,114 @@ body, html {
     margin: 0;
     color: #8ea1b4; }
   .b-agenda__new {
-    font-family: 'Lato-Bold', sans-serif;
-    text-transform: uppercase;
-    font-size: 14px;
-    text-align: center;
-    padding: 22px 30px 22px 22px;
     color: #3598db;
     display: block;
-    text-decoration: none; }
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 14px;
+    padding: 20px 30px 20px 22px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; }
+  .b-agenda__button--prev {
+    background-image: url(../sprites/sprite.png);
+    background-position: -91px -20px;
+    width: 11px;
+    height: 20px; }
+  .b-agenda__button--next {
+    background-image: url(../sprites/sprite.png);
+    background-position: -91px 0px;
+    width: 11px;
+    height: 20px; }
+  .b-agenda__calendar {
+    color: #8ea1b4;
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 14px;
+    text-align: center; }
+    .b-agenda__calendar--week {
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      height: 38px;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-transform: uppercase;
+      width: 40px; }
+    .b-agenda__calendar--day {
+      height: 30px;
+      width: 42px;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .b-agenda__calendar--current {
+      cursor: pointer;
+      position: relative; }
+      .b-agenda__calendar--current:after {
+        background: #51dacf;
+        border-radius: 50%;
+        bottom: 0;
+        display: block;
+        content: '';
+        height: 8px;
+        left: 50%;
+        margin: -.25em 0 0 -.25em;
+        position: absolute;
+        width: 8px; }
+  .b-agenda__event {
+    background: #3498db;
+    border-radius: 50%;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    height: 18px;
+    padding: 6px;
+    width: 20px; }
 
 /* ---------- CALENDAR ---------- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-.calendar {
-  text-align: center;
-  margin: 0 14px 0px 10px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #ddebf4; }
-
-.calendar header {
-  height: 34px;
+.b-calendar {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 28px; }
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
-.calendar h5 {
-  font-size: 16px;
-  font-family: 'Lato-Regular', sans-serif;
-  font-weight: 300;
-  letter-spacing: -1px;
-  margin-right: 10px;
-  color: #34495e; }
-
-.calendar thead {
-  text-transform: uppercase; }
-  .calendar thead td {
-    height: 38px;
-    width: 40px;
-    color: #8ea1b4; }
-
-.calendar tbody {
-  color: #7c8a95; }
-
-.calendar td {
-  border: 2px solid transparent;
-  border-radius: 50%;
-  display: inline-block;
-  height: 24px;
-  font-family: 'Lato-Regular', sans-serif;
-  font-size: 14px;
-  color: #8ea1b4;
-  text-align: center;
-  width: 40px; }
-
-.calendar .prev-month,
-.calendar .next-month {
-  color: #cbd1d2; }
-
-.calendar .prev-month:hover,
-.calendar .next-month:hover {
-  border: 2px solid #cbd1d2; }
-
-.current-day {
-  cursor: pointer;
-  background: #3498db;
-  color: #FFF;
-  border-radius: 50%;
-  padding: 8px; }
-
-.event {
-  cursor: pointer;
-  position: relative; }
-
-.event:after {
-  background: #51dacf;
-  border-radius: 50%;
-  bottom: 0;
-  display: block;
-  content: '';
-  height: 8px;
-  left: 50%;
-  margin: -.25em 0 0 -.25em;
-  position: absolute;
-  width: 8px; }
-
-.event.current-day:after {
-  background: #f9f9f9; }
-
-.btn-prev {
-  background-image: url(../sprites/sprite.png);
-  background-position: -91px -20px;
-  width: 11px;
-  height: 20px; }
-
-.btn-next {
-  background-image: url(../sprites/sprite.png);
-  background-position: -91px 0px;
-  width: 11px;
-  height: 20px; }
+.l-week {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+  .l-week--name {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
