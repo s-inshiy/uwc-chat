@@ -304,7 +304,8 @@ body, html {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-top: auto; }
+    margin-top: auto;
+    min-height: 60px; }
   .l-workspace__angenaTitle {
     border-bottom: 2px solid #ddebf4;
     display: -webkit-flex;
@@ -656,7 +657,20 @@ body, html {
     font-style: normal;
     height: 18px;
     padding: 6px;
-    width: 20px; }
+    max-width: 20px;
+    margin: 0 6px; }
+    .b-agenda__event--between {
+      margin: 0;
+      padding: 6px 9px;
+      border-radius: 0; }
+    .b-agenda__event--right {
+      border-radius: 0 50% 50% 0;
+      margin-left: 0;
+      padding-left: 9px; }
+    .b-agenda__event--left {
+      margin-right: 0;
+      border-radius: 50% 0 0 50%;
+      padding-right: 9px; }
 
 /* ---------- CALENDAR ---------- */
 .b-calendar {
