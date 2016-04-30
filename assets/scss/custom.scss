@@ -288,7 +288,7 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		min-height: 188px;
+		height: 188px;
 	}
 }
 
@@ -597,10 +597,12 @@
 .l-week {
 	display: flex;
 	flex: 1;
+	min-height: 30px;
 	&--name{
 		align-items: flex-start;
 		display: flex;
 		flex: 1;
 		justify-content: center;
+		min-height: 38px;
 	}
 }
