@@ -87,9 +87,6 @@ body, html {
   display: -ms-flexbox;
   display: flex;
   height: 82px;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   min-height: 70px;
   z-index: 1; }
   .b-top__menu {
@@ -283,9 +280,6 @@ body, html {
     display: flex;
     font-family: 'Lato-Bold', sans-serif;
     font-size: 16px;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
     margin: 0px 12px 0px 16px;
     min-height: 62px; }
   .l-workspace__chatTitle {
@@ -354,7 +348,8 @@ body, html {
     display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    min-height: 188px; }
 
 .l-members {
   overflow-y: auto;
