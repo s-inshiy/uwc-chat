@@ -62,13 +62,14 @@ body, html {
 ------------------------------------- */
 .l-chat {
   background-color: #f0f3f7;
-  height: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 100%;
+  min-width: 1024px; }
   .l-chat__account {
     margin-right: 98px;
     -webkit-align-self: center;
@@ -81,6 +82,7 @@ body, html {
 
 .b-top {
   background-color: #3498db;
+  box-shadow: 0px 0px 20px 0px #3498db;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +90,8 @@ body, html {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  min-height: 70px; }
+  min-height: 70px;
+  z-index: 1; }
   .b-top__menu {
     background-image: url(../sprites/sprite.png);
     background-position: -22px -46px;
@@ -306,14 +309,14 @@ body, html {
     display: flex;
     margin-top: auto;
     min-height: 60px; }
-  .l-workspace__angenaTitle {
+  .l-workspace__agendaTitle {
     border-bottom: 2px solid #ddebf4;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin: 0 12px;
     min-height: 62px; }
-  .l-workspace__calendar {
+  .l-workspace__agendaCalendar {
     border-bottom: 2px solid #ddebf4;
     margin: 0 14px 0px 10px;
     padding-bottom: 20px;
@@ -330,7 +333,7 @@ body, html {
     margin: 14px 0 16px; }
     .l-workspace__event:first-child {
       margin-top: 0; }
-  .l-workspace__headerCalendar {
+  .l-workspace__agendaHeader {
     height: 34px;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -342,6 +345,16 @@ body, html {
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 30px; }
+  .l-workspace__agendaMonth {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
 
 .l-members {
   overflow-y: auto;
@@ -501,7 +514,7 @@ body, html {
     border-radius: 10px; }
   .b-chat__button {
     opacity: 0;
-    padding: 12px 22px;
+    padding: 22px;
     cursor: pointer; }
     .b-chat__button--image {
       background-image: url(../sprites/sprite.png);
@@ -641,8 +654,8 @@ body, html {
         background: #51dacf;
         border-radius: 50%;
         bottom: 0;
-        display: block;
         content: '';
+        display: block;
         height: 8px;
         left: 50%;
         margin: -.25em 0 0 -.25em;
@@ -654,35 +667,24 @@ body, html {
     color: #FFF;
     cursor: pointer;
     display: inline-block;
+    box-shadow: 0px 0px 12px 0px #3498db;
     font-style: normal;
     height: 18px;
-    padding: 6px;
+    margin: 0 6px;
     max-width: 20px;
-    margin: 0 6px; }
+    padding: 6px; }
     .b-agenda__event--between {
+      border-radius: 0;
       margin: 0;
-      padding: 6px 9px;
-      border-radius: 0; }
+      padding: 6px 9px; }
     .b-agenda__event--right {
       border-radius: 0 50% 50% 0;
       margin-left: 0;
       padding-left: 9px; }
     .b-agenda__event--left {
-      margin-right: 0;
       border-radius: 50% 0 0 50%;
+      margin-right: 0;
       padding-right: 9px; }
-
-/* ---------- CALENDAR ---------- */
-.b-calendar {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
 
 .l-week {
   display: -webkit-flex;
@@ -692,15 +694,15 @@ body, html {
   -ms-flex: 1;
   flex: 1; }
   .l-week--name {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
+    justify-content: center; }
