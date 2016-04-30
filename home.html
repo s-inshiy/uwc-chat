@@ -17,7 +17,7 @@
 
   <body>
     <div class="l-chat">
-      <div class="b-top">
+      <header class="b-top">
         <div class="b-top__menu"></div>
         <a href="#" class="b-top__search"></a>
         <img src="assets/images/b-top__avatar.png" alt="top-avatar" class="b-top__avatar">
@@ -27,15 +27,15 @@
             <li class="b-top__status">Available</li>
           </ul>
         </div>
-      </div>
+      </header>
       <div class="l-workspace">
-        <div class="b-side">
+        <section class="b-side">
           <a href="#" class="b-side__home"></a>
           <a href="#" class="b-side__chat"></a>
           <a href="#" class="b-side__chart"></a>
           <a href="#" class="b-side__settings"></a>
-        </div>
-        <div class="b-chatList">
+        </section>
+        <section class="b-chatList">
           <div class="l-workspace__chatListTitle">
             <a href="#" class="b-chatList__chat">Chat</a>
             <a href="#" class="b-chatList__new">New</a>
@@ -170,8 +170,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="b-chat">
+        </section>
+        <section class="b-chat">
           <div class="l-workspace__chatTitle">
             <div class="b-chat__name">Abu Abdullah Nugraha</div>
             <div class="b-chat__status b-chat__status--active"></div>
@@ -191,36 +191,36 @@
             <div class="b-chat__person">
               <img src="assets/images/b-chatList__avatar3.png" alt="avatar" class="b-chat__avatar">
               <p class="b-chat__message b-chat__message--left">Iya,semua kita berangkat pake pesawat biar cepet dari  jakarta 
-berangkat, terus dari sini kita naik kereta ke jakarta</p>
+                berangkat, terus dari sini kita naik kereta ke jakarta</p>
+              </div>
+              <div class="b-chat__person b-chat__person--right"> 
+                <p class="b-chat__message b-chat__message--right">Ok,berarti kita beberpa hari disana?</p>
+                <img src="assets/images/b-top__avatar.png" alt="avatar" class="b-chat__avatar">
+              </div>
+              <div class="b-chat__person">
+                <img src="assets/images/b-chatList__avatar3.png" alt="avatar" class="b-chat__avatar">
+                <p class="b-chat__message b-chat__message--left">Yaiyalah tenang kita tidur di hotel ko</p>
+              </div>
+              <div class="b-chat__person b-chat__person--right"> 
+                <p class="b-chat__message b-chat__message--right">Sip lumayan seklian jalan jalan, semoga tim kita bisa menang</p>
+                <img src="assets/images/b-top__avatar.png" alt="avatar" class="b-chat__avatar">
+              </div>
+              <div class="b-chat__person">
+                <img src="assets/images/b-chatList__avatar3.png" alt="avatar" class="b-chat__avatar">
+                <p class="b-chat__message b-chat__message--left">Yaiyalah tenang kita tidur di hotel ko</p>
+              </div>
             </div>
-            <div class="b-chat__person b-chat__person--right"> 
-              <p class="b-chat__message b-chat__message--right">Ok,berarti kita beberpa hari disana?</p>
-              <img src="assets/images/b-top__avatar.png" alt="avatar" class="b-chat__avatar">
+            <div class="l-workspace__type b-chat__type">
+              <input type="text" class="b-chat__text" placeholder="Type your message...">
+              <div class="b-chat__file--image">
+                <input type="file" class="b-chat__file" value=".">
+              </div>
+              <div class="b-chat__button--image">
+                <button class="b-chat__button"></button> 
+              </div>
             </div>
-            <div class="b-chat__person">
-              <img src="assets/images/b-chatList__avatar3.png" alt="avatar" class="b-chat__avatar">
-              <p class="b-chat__message b-chat__message--left">Yaiyalah tenang kita tidur di hotel ko</p>
-            </div>
-            <div class="b-chat__person b-chat__person--right"> 
-              <p class="b-chat__message b-chat__message--right">Sip lumayan seklian jalan jalan, semoga tim kita bisa menang</p>
-              <img src="assets/images/b-top__avatar.png" alt="avatar" class="b-chat__avatar">
-            </div>
-            <div class="b-chat__person">
-              <img src="assets/images/b-chatList__avatar3.png" alt="avatar" class="b-chat__avatar">
-              <p class="b-chat__message b-chat__message--left">Yaiyalah tenang kita tidur di hotel ko</p>
-            </div>
-          </div>
-          <div class="l-workspace__type b-chat__type">
-            <input type="text" class="b-chat__text" placeholder="Type your message...">
-            <div class="b-chat__file--image">
-              <input type="file" class="b-chat__file" value=".">
-            </div>
-            <div class="b-chat__button--image">
-              <button class="b-chat__button"></button> 
-            </div>
-          </div>
-        </div>
-        <div class="b-agenda">
+        </section>
+        <section class="b-agenda">
           <div class="l-workspace__agendaTitle">
             <div class="b-agenda__name">My Agenda</div>
             <div class="b-agenda__menu"></div>
@@ -233,13 +233,13 @@ berangkat, terus dari sini kita naik kereta ke jakarta</p>
               </div>
               <div class='l-workspace__agendaMonth'>
                 <div class='l-week l-week--name'>
-                  <div class='b-agenda__calendar b-agenda__calendar--week'>SU</div>
-                  <div class='b-agenda__calendar b-agenda__calendar--week'>MO</div>
-                  <div class='b-agenda__calendar b-agenda__calendar--week'>TU</div>
-                  <div class='b-agenda__calendar b-agenda__calendar--week'>WE</div>
-                  <div class='b-agenda__calendar b-agenda__calendar--week'>TH</div>
-                  <div class='b-agenda__calendar b-agenda__calendar--week'>FR</div>
-                  <div class='b-agenda__calendar b-agenda__calendar--week'>SA</div>
+                  <div class='b-agenda__calendar b-agenda__calendar--week'>Su</div>
+                  <div class='b-agenda__calendar b-agenda__calendar--week'>Mo</div>
+                  <div class='b-agenda__calendar b-agenda__calendar--week'>Tu</div>
+                  <div class='b-agenda__calendar b-agenda__calendar--week'>We</div>
+                  <div class='b-agenda__calendar b-agenda__calendar--week'>Th</div>
+                  <div class='b-agenda__calendar b-agenda__calendar--week'>Fr</div>
+                  <div class='b-agenda__calendar b-agenda__calendar--week'>Sa</div>
                 </div>
                 <div class='l-week'>
                   <div class='b-agenda__calendar b-agenda__calendar--day'>28</div>
@@ -364,10 +364,10 @@ berangkat, terus dari sini kita naik kereta ke jakarta</p>
           </div>
           <div class="l-workspace__agendaNew">
             <a href="#" class="b-agenda__new">
-                + ADD NEW AGENDA
+                + Add New Agenda
             </a>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </body>

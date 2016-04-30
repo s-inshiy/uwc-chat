@@ -424,8 +424,125 @@ body, html {
   height: 100%; }
 
 /* ------------------------------------
-    Top Styles
+   Layout Styles
 ------------------------------------- */
+.l-workspace {
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  background-color: #f5f6f8;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  height: 100%; }
+  .l-workspace__chatListTitle {
+    border-bottom: 2px solid #edf0f2;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 16px;
+    margin: 0px 12px 0px 16px;
+    min-height: 62px; }
+  .l-workspace__chatTitle {
+    border-bottom: 2px solid #ddebf4;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 62px; }
+  .l-workspace__chat {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto; }
+  .l-workspace__type {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: auto;
+    min-height: 60px; }
+  .l-workspace__agendaTitle {
+    border-bottom: 2px solid #ddebf4;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 12px;
+    min-height: 62px; }
+  .l-workspace__agendaCalendar {
+    border-bottom: 2px solid #ddebf4;
+    margin: 0 14px 0px 10px;
+    padding-bottom: 20px;
+    text-align: center; }
+  .l-workspace__agendaEvents {
+    border-bottom: 1px solid #ddebf4;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 18px 0 0 0;
+    overflow-y: auto;
+    padding: 0 18px 0 14px; }
+  .l-workspace__event {
+    margin: 14px 0 16px; }
+    .l-workspace__event:first-child {
+      margin-top: 0; }
+  .l-workspace__agendaHeader {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 34px;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 30px; }
+  .l-workspace__agendaMonth {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 188px; }
+
+.l-members {
+  overflow-y: auto;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+  .l-members__person {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    padding-top: 10px; }
+    .l-members__person:first-child {
+      margin-top: 14px;
+      padding-top: 0; }
+    .l-members__person--active {
+      background-color: #f5f6f8; }
+  .l-members__avatar {
+    margin-left: 12px;
+    position: relative;
+    width: 20%; }
+  .l-members__info {
+    width: 60%; }
+
 .l-chat {
   background-color: #f0f3f7;
   display: -webkit-flex;
@@ -437,22 +554,48 @@ body, html {
   height: 100%;
   min-width: 1024px; }
   .l-chat__account {
-    margin-right: 98px;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
-    align-self: center; }
+    align-self: center;
+    margin-right: 98px; }
     .l-chat__account ul {
+      list-style: none;
       margin: 0;
-      padding: 0;
-      list-style: none; }
+      padding: 0; }
 
+.l-week {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 30px; }
+  .l-week--name {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 38px; }
+
+/* ------------------------------------
+    Top Styles
+------------------------------------- */
 .b-top {
   background-color: #3498db;
   box-shadow: 0px 0px 20px 0px #3498db;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 82px;
+  height: 76px;
   min-height: 70px;
   z-index: 1; }
   .b-top__menu {
@@ -460,11 +603,11 @@ body, html {
     background-position: -63px 0px;
     width: 25px;
     height: 19px;
-    margin-right: auto;
-    margin-left: 22px;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
-    align-self: center; }
+    align-self: center;
+    margin-left: 22px;
+    margin-right: auto; }
   .b-top__search {
     background-image: url(../sprites/sprite.png);
     background-position: 0px -40px;
@@ -477,25 +620,26 @@ body, html {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
-    margin: 6px 25px 4px 18px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    margin: 6px 25px 4px 18px; }
   .b-top__name {
     color: #FFF;
+    display: block;
     font-family: 'Lato-Bold', sans-serif;
     font-size: 15px;
-    display: block; }
+    margin-bottom: 4px; }
   .b-top__status {
     color: #2775a9;
-    font-size: 12px;
     font-family: 'Lato-Regular', sans-serif;
+    font-size: 12px;
     position: relative; }
     .b-top__status:after {
-      content: '';
-      position: absolute;
       background-image: url(../sprites/sprite.png);
       background-position: -88px -73px;
       width: 10px;
       height: 5px;
+      content: '';
+      position: absolute;
       right: 0;
       top: 6px; }
 
@@ -503,20 +647,20 @@ body, html {
     Side Styles
 ------------------------------------- */
 .b-side {
-  width: 70px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: start;
   align-content: flex-start;
+  background-color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #fff; }
+  width: 70px; }
   .b-side__home {
     background-image: url(../sprites/sprite.png);
     background-position: -40px 0px;
@@ -574,10 +718,10 @@ body, html {
     background-color: #d6e3ec;
     border-radius: 4px;
     color: #8ea1b4;
+    margin-right: 6px;
     padding: 10px 32px;
     text-decoration: none;
-    text-transform: uppercase;
-    margin-right: 6px; }
+    text-transform: uppercase; }
   .b-chatList__count {
     background-color: #3498db;
     border-radius: 50%;
@@ -594,193 +738,77 @@ body, html {
       background-color: transparent;
       color: transparent; }
   .b-chatList__name {
-    font-size: 16px;
+    color: #34495e;
     font-family: 'Lato-Bold', sans-serif;
-    color: #34495e; }
+    font-size: 16px; }
     .b-chatList__name--left {
       color: #a8b6c4; }
   .b-chatList__message {
-    font-size: 12px;
-    font-family: 'Lato-Regular', sans-serif;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
     color: #8ea1b4;
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 12px;
     margin: 0; }
     .b-chatList__message--left {
       color: #c9d6df; }
   .b-chatList__time {
-    font-size: 12px;
+    color: #c9d6df;
     font-family: 'Lato-Regular', sans-serif;
-    color: #c9d6df; }
+    font-size: 12px; }
     .b-chatList__time--active {
       color: transparent; }
   .b-chatList__status {
-    height: 8px;
-    width: 8px;
-    margin-left: 18px;
+    background-color: #d4e1ea;
     border-radius: 50%;
-    margin-top: 8px;
+    height: 8px;
     margin-bottom: 6px;
-    background-color: #d4e1ea; }
+    margin-top: 8px;
+    margin-left: 18px;
+    width: 8px; }
     .b-chatList__status--active {
       background-color: #51dacf; }
   .b-chatList__image {
     border-radius: 50%; }
 
-.l-workspace {
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  background-color: #f5f6f8;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1; }
-  .l-workspace__chatListTitle {
-    border-bottom: 2px solid #edf0f2;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    font-family: 'Lato-Bold', sans-serif;
-    font-size: 16px;
-    margin: 0px 12px 0px 16px;
-    min-height: 62px; }
-  .l-workspace__chatTitle {
-    border-bottom: 2px solid #ddebf4;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 62px; }
-  .l-workspace__chat {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    overflow-x: hidden;
-    overflow-y: auto; }
-  .l-workspace__type {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: auto;
-    min-height: 60px; }
-  .l-workspace__agendaTitle {
-    border-bottom: 2px solid #ddebf4;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 12px;
-    min-height: 62px; }
-  .l-workspace__agendaCalendar {
-    border-bottom: 2px solid #ddebf4;
-    margin: 0 14px 0px 10px;
-    padding-bottom: 20px;
-    text-align: center; }
-  .l-workspace__agendaEvents {
-    border-bottom: 1px solid #ddebf4;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    margin: 18px 0 0 0;
-    overflow-y: auto;
-    padding: 0 18px 0 14px; }
-  .l-workspace__event {
-    margin: 14px 0 16px; }
-    .l-workspace__event:first-child {
-      margin-top: 0; }
-  .l-workspace__agendaHeader {
-    height: 34px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 30px; }
-  .l-workspace__agendaMonth {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: 188px; }
-
-.l-members {
-  overflow-y: auto;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1; }
-  .l-members__person {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-bottom: 6px;
-    padding-top: 10px;
-    margin-bottom: 4px; }
-    .l-members__person:first-child {
-      margin-top: 14px;
-      padding-top: 0; }
-    .l-members__person--active {
-      background-color: #f5f6f8; }
-  .l-members__avatar {
-    margin-left: 12px;
-    position: relative;
-    width: 20%; }
-  .l-members__info {
-    width: 60%; }
-
 /* ------------------------------------
     Chat Styles
 ------------------------------------- */
 .b-chat {
-  width: 556px;
   border-radius: 4px;
-  margin: 20px 15px 20px 6px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-flex-grow: 3;
   -ms-flex-positive: 3;
   flex-grow: 3;
   -webkit-flex-shrink: 3;
   -ms-flex-negative: 3;
   flex-shrink: 3;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  margin: 20px 15px 20px 6px;
+  width: 556px; }
   .b-chat__name {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    color: #16315c;
     font-family: 'Lato-Bold', sans-serif;
     font-size: 18px;
-    color: #16315c;
     letter-spacing: -0.8px;
-    margin-bottom: 4px;
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center; }
+    margin-bottom: 4px; }
   .b-chat__status {
     height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    background-color: #d4e1ea;
-    margin: 0 10px;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
-    align-self: center; }
+    align-self: center;
+    background-color: #d4e1ea;
+    border-radius: 50%;
+    margin: 0 10px;
+    width: 12px; }
     .b-chat__status--active {
       background-color: #51dacf; }
   .b-chat__call {
@@ -833,11 +861,11 @@ body, html {
     padding: 12px 6px 12px 18px;
     position: relative; }
     .b-chat__message--left:before {
-      content: '';
       background-image: url(../sprites/sprite.png);
       background-position: -19px -62px;
       width: 15px;
       height: 14px;
+      content: '';
       left: -6px;
       position: absolute; }
     .b-chat__message--right {
@@ -855,28 +883,28 @@ body, html {
         position: absolute;
         right: -6px; }
   .b-chat__avatar {
-    border-radius: 50%;
     -webkit-align-self: flex-start;
     -ms-flex-item-align: start;
-    align-self: flex-start; }
+    align-self: flex-start;
+    border-radius: 50%; }
   .b-chat__text {
     min-width: 50%;
     padding: 22px 30px 22px 22px;
-    border: none;
+    background-color: #fff;
     border-radius: 10px;
-    font-family: 'Lato-Regular', sans-serif;
-    font-size: 12px;
+    border: none;
     color: #8ea1b4;
-    background-color: #fff; }
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 12px; }
     .b-chat__text:focus, .b-chat__text:active {
       outline: none; }
   .b-chat__type {
     background-color: #FFF;
     border-radius: 10px; }
   .b-chat__button {
+    cursor: pointer;
     opacity: 0;
-    padding: 18px;
-    cursor: pointer; }
+    padding: 18px; }
     .b-chat__button--image {
       background-image: url(../sprites/sprite.png);
       background-position: 0px 0px;
@@ -885,23 +913,23 @@ body, html {
       -webkit-align-self: center;
       -ms-flex-item-align: center;
       align-self: center;
-      border-radius: 50%;
-      margin-right: 16px;
       background-color: #3598db;
-      box-shadow: 0 0 12px 0 #3598db; }
+      border-radius: 50%;
+      box-shadow: 0 0 12px 0 #3598db;
+      margin-right: 16px; }
   .b-chat__file {
-    padding: 10px 6px;
-    opacity: 0;
+    cursor: pointer;
     max-width: 10px;
-    cursor: pointer; }
+    opacity: 0;
+    padding: 10px 6px; }
     .b-chat__file--image {
-      -webkit-align-self: center;
-      -ms-flex-item-align: center;
-      align-self: center;
       background-image: url(../sprites/sprite.png);
       background-position: -63px -19px;
       width: 11px;
       height: 40px;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
       margin-left: auto;
       margin-right: 16px; }
 
@@ -909,23 +937,23 @@ body, html {
     Agenda Styles
 ------------------------------------- */
 .b-agenda {
-  min-width: 346px;
-  border-radius: 4px;
-  margin: 20px 30px 20px 15px;
   background-color: #fff;
+  border-radius: 4px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 20px 30px 20px 15px;
+  min-width: 346px; }
   .b-agenda__name {
-    font-family: 'Lato-Bold', sans-serif;
-    font-size: 18px;
-    color: #3598db;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
+    color: #3598db;
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 18px;
     letter-spacing: -1.2px; }
   .b-agenda__menu {
     background-image: url(../sprites/sprite.png);
@@ -937,24 +965,24 @@ body, html {
     align-self: center;
     margin: -2px 8px 0 auto; }
   .b-agenda__title {
-    font-size: 16px;
+    color: #34495e;
     font-family: 'Lato-Regular', sans-serif;
+    font-size: 16px;
     font-weight: 300;
     letter-spacing: -1px;
-    margin-right: 10px;
-    color: #34495e; }
+    margin-right: 10px; }
   .b-agenda__date {
-    font-size: 16px;
+    color: #34495e;
     font-family: 'Lato-Bold', sans-serif;
+    font-size: 16px;
     letter-spacing: -0.8px;
-    margin: 0;
-    color: #34495e; }
+    margin: 0; }
   .b-agenda__descr {
-    font-size: 14px;
+    color: #8ea1b4;
     font-family: 'Lato-Regular', sans-serif;
+    font-size: 14px;
     letter-spacing: -0.8px;
-    margin: 0;
-    color: #8ea1b4; }
+    margin: 0; }
   .b-agenda__new {
     color: #3598db;
     display: block;
@@ -1033,41 +1061,18 @@ body, html {
     box-shadow: 0px 0px 12px 0px #3498db;
     font-style: normal;
     height: 18px;
-    margin: 0 6px;
+    margin: 0 9px;
     max-width: 20px;
     padding: 6px; }
     .b-agenda__event--between {
       border-radius: 0;
       margin: 0;
-      padding: 6px 9px; }
+      padding: 6px 12px; }
     .b-agenda__event--right {
       border-radius: 0 50% 50% 0;
       margin-left: 0;
-      padding-left: 9px; }
+      padding-left: 12px; }
     .b-agenda__event--left {
       border-radius: 50% 0 0 50%;
       margin-right: 0;
-      padding-right: 9px; }
-
-.l-week {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-height: 30px; }
-  .l-week--name {
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    min-height: 38px; }
+      padding-right: 12px; }

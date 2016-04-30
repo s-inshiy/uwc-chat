@@ -30,203 +30,15 @@
 	}
 
 /* ------------------------------------
-    Top Styles
+   Layout Styles
 ------------------------------------- */
-
-.l-chat {
-	background-color: $main;
-	display: flex;
-	flex-direction: column;    
-	height: 100%;
-	min-width: 1024px;
-	&__account {
-		margin-right:98px;
-		align-self: center;
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-	}
-}
-
-.b-top {
-	background-color: $top;
-	box-shadow: 0px 0px 20px 0px #3498db;
-	display: flex;
-	height: 82px;
-	min-height: 70px;
-	z-index: 1;
-	&__menu {
-		@include sprite($b-top-menu);
-		//order: 1;
-		margin-right: auto;
-		margin-left: 22px;
-		align-self: center;
-		//margin: 26px auto 26px  22px
-	}
-	&__search {
-		@include sprite($b-top-search);
-		align-self: center;
-	}	
-	&__avatar {
-		align-self: center;
-		margin: 6px 25px 4px 18px;
-		border-radius: 50%;
-	}
-	&__name {
-		color: #FFF;
-		font-family: 'Lato-Bold', sans-serif;
-		font-size: 15px;
-		display: block;
-	}
-	&__status {
-		color: #2775a9;
-		font-size: 12px;
-		font-family: 'Lato-Regular', sans-serif;
-		position: relative;
-		&:after {
-			content: '';
-			position: absolute;
-			@include sprite($b-top-arrow);
-			right: 0;
-			top: 6px;
-		}
-	}
-}
-
-/* ------------------------------------
-    Side Styles
-------------------------------------- */
-
-.b-side {
-	width: 70px;
-	display: flex;
-	align-content: flex-start;
-	flex-wrap: wrap;
-	justify-content: center;
-	background-color: #fff;
-	&__home {
-		@include sprite($b-side-home);
-		margin: 20px 10px;
-	}
-	&__chat {
-		@include sprite($b-side-chat);
-		margin: 34px 10px;
-	}
-	&__chart {
-		@include sprite($b-side-chart);
-		margin: 16px 10px; 
-	};
-	&__settings {
-		@include sprite($b-side-settings);
-		margin: 34px 10px;
-	}
-}
-
-/* ------------------------------------
-    Chat List Styles
-------------------------------------- */
-
-.b-chatList {
-	//flex-shrink: 4;
-	background-color: #fff;
-	border-radius: 4px;
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	margin: 20px 15px 20px 30px;
-	min-width: 272px;
-	width: 280px;
-	&__chat {
-		align-self: center;
-		color: $blue-main;
-		margin-right: auto;
-		text-decoration: none;
-	}
-	&__new {
-		align-self: center;
-		background-color: #d6e3ec;
-		border-radius: 4px;
-		color: $gray-text;
-		padding: 10px 32px;
-		text-decoration: none;
-		text-transform: uppercase;
-		margin-right: 6px;
-	}
-	&__count {
-		background-color: $top;
-		border-radius: 50%;
-		color: #fff;
-		font-family: 'Lato-Bold', sans-serif;
-		font-size: 12px;
-		font-style: normal;
-		left: 24px;
-		padding: 10px;
-		padding: 4px 8px;
-		position: absolute;
-		top: -8px;
-		&--active {
-			background-color: transparent;
-			color: transparent;
-		}
-	}
-
-	&__name {
-			font-size: 16px;
-			font-family: 'Lato-Bold', sans-serif;
-			color: $gray-name;
-			&--left {
-				color: #a8b6c4;
-			}
-	}
-
-	&__message {
-		font-size: 12px;
-		font-family: 'Lato-Regular', sans-serif;
-		align-self: center;
-		color: $gray-text;
-		margin: 0;
-		&--left {
-			color: $gray-time;
-		}
-	}
-
-	&__time {
-		font-size: 12px;
-		font-family: 'Lato-Regular', sans-serif;
-		color: $gray-time;	
-		//max-width: 10%;
-		&--active {
-			color: transparent;
-		}
-	}
-
-	&__status {
-		height: 8px;
-    width: 8px;
-    margin-left: 18px;
-		border-radius: 50%;
-		margin-top: 8px;
-		margin-bottom: 6px;
-		background-color: $gray-status;
-		//align-self: center;
-		&--active {
-			background-color: $active;
-		}
-	}
-
-	&__image {
-		border-radius: 50%;
-	}
-
-}
 
 .l-workspace {
 	align-content: flex-start;
 	background-color: $gray-background;
 	display: flex;
 	flex-grow: 1;
+	height: 100%;
 	&__chatListTitle {
 		border-bottom: 2px solid #edf0f2;
 		display: flex;
@@ -264,10 +76,8 @@
 		text-align: center;
 	}
 	&__agendaEvents {
-		//height: 242px;
 		border-bottom: 1px solid #ddebf4;
 		flex-grow: 1;
-		// margin: 14px 0 0 0;
 		margin: 18px 0 0 0;
 		overflow-y: auto;
 		padding: 0 18px 0 14px;
@@ -279,16 +89,16 @@
 		margin: 14px 0 16px;
 	}
 	&__agendaHeader {
-		height: 34px;
-		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		display: flex;
+		height: 34px;
+		justify-content: space-between;
 		margin-bottom: 30px;
 	}
 	&__agendaMonth {
-		flex: 1;
 		display: flex;
 		flex-direction: column;
+		flex: 1;
 		height: 188px;
 	}
 }
@@ -303,9 +113,9 @@
 		}
 		display: flex;
 		flex-wrap: wrap;
+		margin-bottom: 4px;
 		padding-bottom: 6px;
 		padding-top: 10px;
-		margin-bottom: 4px;
 		&--active {
 			background-color: $gray-background;
 		}
@@ -320,33 +130,229 @@
 	}
 }
 
+.l-chat {
+	background-color: $main;
+	display: flex;
+	flex-direction: column;    
+	height: 100%;
+	min-width: 1024px;
+	&__account {
+		align-self: center;
+		margin-right:98px;
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.l-week {
+	display: flex;
+	flex: 1;
+	min-height: 30px;
+	&--name{
+		align-items: flex-start;
+		display: flex;
+		flex: 1;
+		justify-content: center;
+		min-height: 38px;
+	}
+}
+
+/* ------------------------------------
+    Top Styles
+------------------------------------- */
+
+.b-top {
+	background-color: $top;
+	box-shadow: 0px 0px 20px 0px #3498db;
+	display: flex;
+	height: 76px;
+	min-height: 70px;
+	z-index: 1;
+	&__menu {
+		@include sprite($b-top-menu);
+		align-self: center;
+		margin-left: 22px;
+		margin-right: auto;
+	}
+	&__search {
+		@include sprite($b-top-search);
+		align-self: center;
+	}	
+	&__avatar {
+		align-self: center;
+		border-radius: 50%;
+		margin: 6px 25px 4px 18px;
+	}
+	&__name {
+		color: #FFF;
+		display: block;
+		font-family: 'Lato-Bold', sans-serif;
+		font-size: 15px;
+		margin-bottom: 4px;
+	}
+	&__status {
+		color: #2775a9;
+		font-family: 'Lato-Regular', sans-serif;
+		font-size: 12px;
+		position: relative;
+		&:after {
+			@include sprite($b-top-arrow);
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 6px;
+		}
+	}
+}
+
+/* ------------------------------------
+    Side Styles
+------------------------------------- */
+
+.b-side {
+	align-content: flex-start;
+	background-color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 70px;
+	&__home {
+		@include sprite($b-side-home);
+		margin: 20px 10px;
+	}
+	&__chat {
+		@include sprite($b-side-chat);
+		margin: 34px 10px;
+	}
+	&__chart {
+		@include sprite($b-side-chart);
+		margin: 16px 10px; 
+	};
+	&__settings {
+		@include sprite($b-side-settings);
+		margin: 34px 10px;
+	}
+}
+
+/* ------------------------------------
+    Chat List Styles
+------------------------------------- */
+
+.b-chatList {
+	background-color: #fff;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	margin: 20px 15px 20px 30px;
+	min-width: 272px;
+	width: 280px;
+	&__chat {
+		align-self: center;
+		color: $blue-main;
+		margin-right: auto;
+		text-decoration: none;
+	}
+	&__new {
+		align-self: center;
+		background-color: #d6e3ec;
+		border-radius: 4px;
+		color: $gray-text;
+		margin-right: 6px;
+		padding: 10px 32px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	&__count {
+		background-color: $top;
+		border-radius: 50%;
+		color: #fff;
+		font-family: 'Lato-Bold', sans-serif;
+		font-size: 12px;
+		font-style: normal;
+		left: 24px;
+		padding: 10px;
+		padding: 4px 8px;
+		position: absolute;
+		top: -8px;
+		&--active {
+			background-color: transparent;
+			color: transparent;
+		}
+	}
+	&__name {
+		color: $gray-name;
+		font-family: 'Lato-Bold', sans-serif;
+		font-size: 16px;
+		&--left {
+			color: #a8b6c4;
+		}
+	}
+	&__message {
+		align-self: center;
+		color: $gray-text;
+		font-family: 'Lato-Regular', sans-serif;
+		font-size: 12px;
+		margin: 0;
+		&--left {
+			color: $gray-time;
+		}
+	}
+	&__time {
+		color: $gray-time;	
+		font-family: 'Lato-Regular', sans-serif;
+		font-size: 12px;
+		&--active {
+			color: transparent;
+		}
+	}
+	&__status {
+		background-color: $gray-status;
+		border-radius: 50%;
+		height: 8px;
+		margin-bottom: 6px;
+		margin-top: 8px;
+    margin-left: 18px;
+    width: 8px;
+		&--active {
+			background-color: $active;
+		}
+	}
+	&__image {
+		border-radius: 50%;
+	}
+}
+
 /* ------------------------------------
     Chat Styles
 ------------------------------------- */
 
 .b-chat {
-	width: 556px;
 	border-radius: 4px;
-	margin: 20px 15px 20px 6px;
-	flex-grow: 3;
-	flex-shrink: 3;
 	display: flex;
 	flex-direction: column;
+	flex-grow: 3;
+	flex-shrink: 3;
+	margin: 20px 15px 20px 6px;
+	width: 556px;
 	&__name {
+		align-self: center;
+		color: #16315c;
 		font-family: 'Lato-Bold', sans-serif;
 		font-size: 18px;
-		color: #16315c;
 		letter-spacing: -0.8px;
 		margin-bottom: 4px;
-		align-self: center;
 	}
 	&__status {
 		height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    background-color: $gray-status;
-    margin: 0 10px;
     align-self: center;
+    background-color: $gray-status;
+    border-radius: 50%;
+    margin: 0 10px;
+    width: 12px;
     &--active {
     	background-color: $active;
     }
@@ -364,16 +370,13 @@
 	&__menu {
 		@include sprite($b-chat-menu);
 		align-self: center;
-		// margin: 0 10px;
 		margin: 0 12px 0 10px;
 	}
 	&__person {
-		//margin: 8px 0px 8px -8px;
 		min-width: 60%;
 		margin: 8px 0px 8px 0px;
 		display: flex;
 		&--right {
-			//margin: 0 -4px 8px auto;
 			margin: 0px -4px 0px auto;
 		}
 	}
@@ -391,8 +394,8 @@
     position: relative;
     &--left {
     	&:before {
-    		content: '';
     		@include sprite($b-chat-triangle0);
+    		content: '';
     		left: -6px;
     		position: absolute;
     	}
@@ -412,20 +415,18 @@
 		}
 	}
 	&__avatar {
-		border-radius: 50%;
 		align-self: flex-start;
-		//margin-left: 5px;
+		border-radius: 50%;
 	}
 	&__text {
-		//min-width: 70%;
 		min-width: 50%;
 		padding: 22px 30px 22px 22px;
-    border: none;
+    background-color: #fff;
     border-radius: 10px;
+    border: none;
+    color: $gray-text;
     font-family: 'Lato-Regular', sans-serif;
     font-size: 12px;
-    color: $gray-text;
-    background-color: #fff;
     &:focus, &:active {
     	outline: none;
     }
@@ -438,27 +439,26 @@
 		&--image {
 			@include sprite ($b-chat-send);
     	align-self: center;
-    	border-radius: 50%;
-    	margin-right: 16px;
     	background-color: $blue-main;
+    	border-radius: 50%;
     	box-shadow: 0 0 12px 0 $blue-main;
+    	margin-right: 16px;
 		}
+    cursor: pointer;
     opacity: 0;
     padding: 18px;
-    cursor: pointer;
 	}
 	&__file {
 		&--image {
-			align-self: center;
 			@include sprite ($b-chat-attach);
+			align-self: center;
 			margin-left: auto;
 			margin-right: 16px;
 		}
-		// padding: 10px;
-		padding: 10px 6px;
-		opacity: 0;
-		max-width: 10px;
 		cursor: pointer;
+		max-width: 10px;
+		opacity: 0;
+		padding: 10px 6px;
 	}
 }
 
@@ -467,18 +467,17 @@
 ------------------------------------- */
 
 .b-agenda {
-	min-width: 346px;
-	border-radius: 4px;
-	margin: 20px 30px 20px 15px;
 	background-color: #fff;
+	border-radius: 4px;
 	display: flex;
 	flex-direction: column;
+	margin: 20px 30px 20px 15px;
+	min-width: 346px;
 	&__name {
+		align-self: center;
+		color: $blue-main;
 		font-family: 'Lato-Bold', sans-serif;
 		font-size: 18px;
-		color: $blue-main;
-		//margin: 20px 0px;
-		align-self: center;
 		letter-spacing: -1.2px;
 	}
 	&__menu {
@@ -487,26 +486,26 @@
     margin: -2px 8px 0 auto;
 	}
 	&__title {
-		font-size: 16px;
+		color: $gray-name;
 		font-family: 'Lato-Regular', sans-serif;
+		font-size: 16px;
 		font-weight: 300;
 		letter-spacing: -1px;
 		margin-right: 10px;
-		color: $gray-name;
 	}
 	&__date {
-		font-size: 16px;
+		color: $gray-name;
 		font-family: 'Lato-Bold', sans-serif;
+		font-size: 16px;
 		letter-spacing: -0.8px;
 		margin: 0;
-		color: $gray-name;
 	}
 	&__descr {
-		font-size: 14px;
+		color: $gray-text;
 		font-family: 'Lato-Regular', sans-serif;
+		font-size: 14px;
 		letter-spacing: -0.8px;
 		margin: 0;
-		color: $gray-text;
 	}
 	&__new {
 		color: $blue-main;
@@ -574,36 +573,23 @@
     box-shadow: 0px 0px 12px 0px rgba(52,152,219,1);
     font-style: normal;
     height: 18px;
-    margin: 0 6px;
+    margin: 0 9px;
     max-width: 20px; 
     padding: 6px;
     &--between {
     	border-radius: 0;
     	margin: 0;
-    	padding: 6px 9px;
+    	padding: 6px 12px;
     }
     &--right {
 			border-radius: 0 50% 50% 0;
 			margin-left: 0;
-			padding-left: 9px;
+			padding-left: 12px;
     }
     &--left {
 			border-radius: 50% 0 0 50%;
 			margin-right: 0;
-			padding-right: 9px;
+			padding-right: 12px;
     }
-	}
-}
-
-.l-week {
-	display: flex;
-	flex: 1;
-	min-height: 30px;
-	&--name{
-		align-items: flex-start;
-		display: flex;
-		flex: 1;
-		justify-content: center;
-		min-height: 38px;
 	}
 }
