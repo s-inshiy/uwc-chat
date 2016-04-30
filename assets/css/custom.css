@@ -94,7 +94,7 @@ body, html {
   z-index: 1; }
   .b-top__menu {
     background-image: url(../sprites/sprite.png);
-    background-position: -22px -46px;
+    background-position: -63px 0px;
     width: 25px;
     height: 19px;
     margin-right: auto;
@@ -104,7 +104,7 @@ body, html {
     align-self: center; }
   .b-top__search {
     background-image: url(../sprites/sprite.png);
-    background-position: -50px -22px;
+    background-position: 0px -40px;
     width: 22px;
     height: 22px;
     -webkit-align-self: center;
@@ -130,7 +130,7 @@ body, html {
       content: '';
       position: absolute;
       background-image: url(../sprites/sprite.png);
-      background-position: -91px -59px;
+      background-position: -88px -73px;
       width: 10px;
       height: 5px;
       right: 0;
@@ -156,25 +156,25 @@ body, html {
   background-color: #fff; }
   .b-side__home {
     background-image: url(../sprites/sprite.png);
-    background-position: -50px 0px;
+    background-position: -40px 0px;
     width: 23px;
     height: 22px;
     margin: 20px 10px; }
   .b-side__chat {
     background-image: url(../sprites/sprite.png);
-    background-position: -47px -46px;
+    background-position: -40px -22px;
     width: 23px;
     height: 16px;
     margin: 34px 10px; }
   .b-side__chart {
     background-image: url(../sprites/sprite.png);
-    background-position: 0px -46px;
+    background-position: -22px -40px;
     width: 22px;
     height: 22px;
     margin: 16px 10px; }
   .b-side__settings {
     background-image: url(../sprites/sprite.png);
-    background-position: 0px -68px;
+    background-position: 0px -62px;
     width: 19px;
     height: 18px;
     margin: 34px 10px; }
@@ -424,7 +424,7 @@ body, html {
       background-color: #51dacf; }
   .b-chat__call {
     background-image: url(../sprites/sprite.png);
-    background-position: -73px -20px;
+    background-position: -88px 0px;
     width: 17px;
     height: 19px;
     -webkit-align-self: center;
@@ -433,7 +433,7 @@ body, html {
     margin: 0 4px 0 auto; }
   .b-chat__videocall {
     background-image: url(../sprites/sprite.png);
-    background-position: -73px 0px;
+    background-position: -44px -40px;
     width: 18px;
     height: 20px;
     -webkit-align-self: center;
@@ -442,7 +442,7 @@ body, html {
     margin: 0px 26px; }
   .b-chat__menu {
     background-image: url(../sprites/sprite.png);
-    background-position: -91px -40px;
+    background-position: -99px -19px;
     width: 5px;
     height: 19px;
     -webkit-align-self: center;
@@ -474,7 +474,7 @@ body, html {
     .b-chat__message--left:before {
       content: '';
       background-image: url(../sprites/sprite.png);
-      background-position: -34px -68px;
+      background-position: -19px -62px;
       width: 15px;
       height: 14px;
       left: -6px;
@@ -488,7 +488,7 @@ body, html {
       .b-chat__message--right:after {
         content: '';
         background-image: url(../sprites/sprite.png);
-        background-position: -19px -68px;
+        background-position: -88px -59px;
         width: 15px;
         height: 14px;
         position: absolute;
@@ -514,20 +514,22 @@ body, html {
     border-radius: 10px; }
   .b-chat__button {
     opacity: 0;
-    padding: 22px;
+    padding: 18px;
     cursor: pointer; }
     .b-chat__button--image {
       background-image: url(../sprites/sprite.png);
       background-position: 0px 0px;
-      width: 50px;
-      height: 46px;
+      width: 40px;
+      height: 40px;
       -webkit-align-self: center;
       -ms-flex-item-align: center;
       align-self: center;
       border-radius: 50%;
-      margin-right: 10px; }
+      margin-right: 16px;
+      background-color: #3598db;
+      box-shadow: 0 0 12px 0 #3598db; }
   .b-chat__file {
-    padding: 10px;
+    padding: 10px 6px;
     opacity: 0;
     max-width: 10px;
     cursor: pointer; }
@@ -536,11 +538,11 @@ body, html {
       -ms-flex-item-align: center;
       align-self: center;
       background-image: url(../sprites/sprite.png);
-      background-position: -73px -39px;
+      background-position: -63px -19px;
       width: 11px;
-      height: 22px;
+      height: 40px;
       margin-left: auto;
-      margin-right: 10px; }
+      margin-right: 16px; }
 
 /* ------------------------------------
     Agenda Styles
@@ -566,7 +568,7 @@ body, html {
     letter-spacing: -1.2px; }
   .b-agenda__menu {
     background-image: url(../sprites/sprite.png);
-    background-position: -91px -40px;
+    background-position: -99px -19px;
     width: 5px;
     height: 19px;
     -webkit-align-self: center;
@@ -603,12 +605,12 @@ body, html {
     text-transform: uppercase; }
   .b-agenda__button--prev {
     background-image: url(../sprites/sprite.png);
-    background-position: -91px -20px;
+    background-position: -88px -39px;
     width: 11px;
     height: 20px; }
   .b-agenda__button--next {
     background-image: url(../sprites/sprite.png);
-    background-position: -91px 0px;
+    background-position: -88px -19px;
     width: 11px;
     height: 20px; }
   .b-agenda__calendar {
